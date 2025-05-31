@@ -12,7 +12,7 @@ const MainSection = () => {
     {
       id: 1,
       name: 'Central Sports Complex',
-      location: 'Downtown, Mumbai',
+      location: 'Barcelona',
       sport: 'Football',
       image: 'https://cdn.pixabay.com/photo/2016/11/29/03/53/athletes-1867185_1280.jpg',
       rating: 4.8,
@@ -22,7 +22,7 @@ const MainSection = () => {
     {
       id: 2,
       name: 'Riverside Courts',
-      location: 'Bandra West, Mumbai',
+      location: 'Germany',
       sport: 'Basketball',
       image: 'https://cdn.pixabay.com/photo/2015/01/26/22/40/child-613199_960_720.jpg',
       rating: 4.6,
@@ -32,7 +32,7 @@ const MainSection = () => {
     {
       id: 3,
       name: 'Green Field Arena',
-      location: 'Andheri East, Mumbai',
+      location: 'Spain',
       sport: 'Cricket',
       image: 'https://cdn.pixabay.com/photo/2020/11/18/10/18/goalkeeper-5754865_1280.jpg',
       rating: 4.9,
