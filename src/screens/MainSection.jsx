@@ -132,7 +132,7 @@ const MainSection = () => {
               HOW IT WORKS
             </h2>
             <p className="text-medium-weight text-medium text-lg max-w-2xl mx-auto text-gray-100">
-              Book your favorite sports pitch in just three simple steps
+              Book your favorite sports pitch in just three simple steps testing purposes
             </p>
           </div>
 
