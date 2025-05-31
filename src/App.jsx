@@ -1,6 +1,7 @@
 import './App.css'
-import WelcomeScreen from './screens/WelcomeScreen'
+import MainSection from './screens/MainSection'
 import Navbar from './screens/Navbar'
+import FAQ from './screens/FAQ' // Added import statement for FAQ
 import { Routes, Route } from 'react-router'
 import '@fontsource/dm-sans'; // Defaults to weight 400
 import '@fontsource/dm-sans/500.css'; // Medium
@@ -12,9 +13,9 @@ function App() {
   return (
     <>
     <Navbar/>
-  <Routes>
-    <Route path="/" element={<WelcomeScreen/>}/>
-    
+    <Routes>
+      <Route path="/" element={<MainSection/>}/>
+      <Route path="/faq" element={<FAQ/>}/> 
     </Routes>
     </>
   )
