@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 import FAQ from './FAQ';
 import Footer from './Footer';
 
 const MainSection = () => {
-  const [location, setLocation] = useState('');
-  const [sportType, setSportType] = useState('');
-  const [date, setDate] = useState('');
 
   const availablePitches = [
     {
