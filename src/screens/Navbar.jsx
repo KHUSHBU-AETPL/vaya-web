@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/images/logo_vaya.png'; 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [leaguesOpen, setLeaguesOpen] = useState(false);
@@ -127,6 +127,7 @@ const Navbar = () => {
             <Link to="/faq" className="text-primary-black hover:text-primary-orange transition-colors duration-200 ease-in-out">
               <span className="text-semibold text-medium">FAQ</span>
             </Link>
+
 
             {/* Play Now Button */}
             <Link to="/play" className="bg-primary-orange text-primary-white px-6 py-2 rounded-lg hover:bg-warning-dark transition-colors duration-300 shadow-sm hover:shadow-md">
@@ -255,6 +256,11 @@ const Navbar = () => {
             <span className="text-semibold text-medium">FAQ</span>
           </Link>
           
+          {/* Mobile Admin */}
+          <Link to="/admin" className="block px-3 py-2 text-primary-black hover:text-primary-orange rounded-md transition-colors duration-200">
+            <span className="text-semibold text-medium">Admin</span>
+          </Link>
+
           {/* Mobile Play Now Button */}
           <Link to="/play" className="block mt-4 text-center bg-primary-orange text-primary-white px-4 py-3 rounded-lg hover:bg-warning-dark transition-colors duration-300 shadow-sm hover:shadow-md">
             <span className="text-semibold text-medium text-primary-white">Play Now</span>
