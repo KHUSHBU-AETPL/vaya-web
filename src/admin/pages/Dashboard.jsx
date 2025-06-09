@@ -4,7 +4,7 @@ function Dashboard() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleOpenFlutterDashboard = () => {
-    const flutterDashboardUrl = "http://localhost:57645/";
+    const flutterDashboardUrl = "https://vaya-web.web.app/#/login";
     setIsLoading(true);
     setTimeout(() => {
       window.open(flutterDashboardUrl, "_blank");
