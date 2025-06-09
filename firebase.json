@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "vaya-web",
     "public": "dist",
     "ignore": [
       "firebase.json",
