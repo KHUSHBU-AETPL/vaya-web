@@ -10,7 +10,7 @@ function AdminLayout() {
             <p className="text-sm mt-1" style={{ color: 'var(--color-gray-100)' }}>Manage your application</p>
           </div>
           <Link to="/" className="px-4 py-2 rounded-lg" style={{ backgroundColor: 'var(--color-secondary-orange-50)', color: 'var(--color-primary-white)' }}>
-            Back to Home
+            Back to Home 
           </Link>
         </div>
         <div className="border-t border-gray-200" style={{ borderColor: 'var(--color-gray-25)' }}></div>
