@@ -1,80 +1,119 @@
-import React from 'react';
-import { Link } from 'react-router';
-import { FaInstagram, FaTwitter } from 'react-icons/fa';
+import React from "react";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaLinkedin,
+  FaApple,
+  FaGooglePlay,
+} from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-tr from-primary-black via-primary-beige to-primary-orange text-primary-white pt-12 pb-6">
-      <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+    <footer className="bg-primary-beige text-primary-black pt-16 pb-10">
+      <div className="container mx-auto px-6 space-y-20">
 
-        {/* Brand */}
-        <div>
-          <h3 className="text-2xl font-bold mb-4 text-primary-orange">Vaya</h3>
-          <p className="text-sm text-gray-200 max-w-xs leading-relaxed">
-            Finding and booking sports facilities made easy.
-          </p>
-        </div>
+        {/* Top Sections */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          {/* Vaya App */}
+          <div>
+            <h4 className="text-2xl font-bold text-primary-orange mb-6 relative inline-block">
+              <span className="border-b-4 border-primary-orange pb-1">Vaya App</span>
+            </h4>
+            <ul className="space-y-3">
+              {[
+                "Play football",
+                "Code of conduct",
+                "Become an organiser",
+                "Corporate football",
+              ].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Company */}
-        <div>
-          <h4 className="text-lg font-semibold mb-3 text-primary-orange">Company</h4>
-          <ul className="space-y-2 text-sm text-gray-100">
-            <li>
-              <Link to="/about" className="hover:text-white hover:translate-x-1 transition-all duration-300">About Us</Link>
-            </li>
-            <li>
-              <Link to="/careers" className="hover:text-white hover:translate-x-1 transition-all duration-300">Careers</Link>
-            </li>
-            <li>
-              <Link to="/blog" className="hover:text-white hover:translate-x-1 transition-all duration-300">Blog</Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Support */}
-        <div>
-          <h4 className="text-lg font-semibold mb-3 text-primary-orange">Support</h4>
-          <ul className="space-y-2 text-sm text-gray-100">
-            <li>
-              <Link to="/faq" className="hover:text-white hover:translate-x-1 transition-all duration-300">FAQ</Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-300">Contact Us</Link>
-            </li>
-            <li>
-              <Link to="/terms" className="hover:text-white hover:translate-x-1 transition-all duration-300">Terms & Conditions</Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Social */}
-        <div className="flex flex-col items-center text-center mt-8 md:mt-0 md:items-end md:text-right justify-between">
-          <h4 className="text-xl font-bold mb-4 text-primary-orange tracking-wide">Follow Us</h4>
-          <div className="flex space-x-4">
-            {/* Instagram */}
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="group rounded-full p-3 bg-white shadow-md hover:bg-primary-orange transition-all duration-300"
-            >
-              <FaInstagram className="w-6 h-6 text-primary-orange group-hover:text-white transition-colors duration-300" />
-            </a>
-            {/* Twitter */}
-            <a
-              href="#"
-              aria-label="Twitter"
-              className="group rounded-full p-3 bg-white shadow-md hover:bg-primary-orange transition-all duration-300"
-            >
-              <FaTwitter className="w-6 h-6 text-primary-orange group-hover:text-white transition-colors duration-300" />
-            </a>
+          {/* About Vaya */}
+          <div>
+            <h4 className="text-2xl font-bold text-primary-orange mb-6 relative inline-block">
+              <span className="border-b-4 border-primary-orange pb-1">About Vaya</span>
+            </h4>
+            <ul className="space-y-3">
+              {[
+                "Our story",
+                "Contact",
+                "Privacy Policy",
+                "Terms of use / Service",
+                "Partner with us",
+              ].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-      </div>
+        {/* Bottom Sections */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-65">
 
-      {/* Copyright */}
-      <div className="border-t border-white/20 mt-10 pt-4 text-center text-sm text-gray-300">
-        © {new Date().getFullYear()} <span className="text-primary-orange font-semibold">Vaya</span>. All rights reserved.
+          {/* Download App */}
+          <div className="text-center md:text-left">
+            <h4 className="text-2xl font-bold text-primary-orange mb-4">
+              Download the <span className="text-black">Vaya</span> app on
+            </h4>
+            <div className="flex justify-center md:justify-start gap-4">
+              <a
+                href="#"
+                className="flex items-center gap-3 px-5 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all shadow-md hover:shadow-xl"
+              >
+                <FaApple className="text-2xl" />
+                <span className="text-sm font-medium">App Store</span>
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-3 px-5 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all shadow-md hover:shadow-xl"
+              >
+                <FaGooglePlay className="text-2xl" />
+                <span className="text-sm font-medium">Google Play</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Follow Us */}
+          <div className="text-center md:text-right">
+            <h4 className="text-2xl font-bold text-primary-orange mb-4 mr-12">
+              Follow Us
+            </h4>
+            <div className="flex justify-center md:justify-end ml-12 gap-4">
+              {[SiTiktok, FaInstagram, FaFacebook, FaLinkedin].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-11 h-11 flex items-center justify-center rounded-full bg-primary-orange text-white hover:scale-110 transition-transform duration-300 shadow-md hover:shadow-xl"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-gray-300 pt-6 text-center text-sm text-gray-600">
+          © {new Date().getFullYear()} <span className="text-primary-orange font-semibold">Vaya</span>. All rights reserved.
+        </div>
       </div>
     </footer>
   );
