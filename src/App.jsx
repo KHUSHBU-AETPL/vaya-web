@@ -13,6 +13,8 @@ import AllScreens from './screens/AllScreens'
 import AboutUs from './screens/AboutUs'
 import DownloadApp from './screens/DownloadApp'
 import Support from './screens/Support'
+import PrivacyPolicy from './screens/PrivacyPolicy';
+import DataDeletion from './screens/DataDeletion';
 function App() {
 
   return (
@@ -27,6 +29,8 @@ function App() {
       <Route path="/admin" element={<AdminLayout/>}>
         <Route index element={<Dashboard/>}/>
       </Route>
+      <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+      <Route path="/data-deletion" element={<DataDeletion/>}/>
     </Routes>
     </>
   )
