@@ -11,6 +11,7 @@ import '@fontsource/dm-sans/600.css'; // Semi Bold
 import '@fontsource/dm-sans/900.css'; // Black
 import AllScreens from './screens/AllScreens'
 import AboutUs from './screens/AboutUs'
+import AboutUsDetailed from './screens/AboutUsDetailed'
 import DownloadApp from './screens/DownloadApp'
 import Support from './screens/Support'
 import PrivacyPolicy from './screens/PrivacyPolicy';
@@ -24,6 +25,7 @@ function App() {
       <Route path="/" element={<AllScreens/>}/>
       <Route path="/faq" element={<FAQ/>}/>
       <Route path="/about" element={<AboutUs/>}/>
+      <Route path="/about/detailed" element={<AboutUsDetailed/>}/>
       <Route path="/download" element={<DownloadApp/>}/>
       <Route path="/support" element={<Support/>}/>
       <Route path="/admin" element={<AdminLayout/>}>

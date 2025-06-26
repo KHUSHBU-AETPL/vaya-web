@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => (
   <div className="bg-primary-beige py-8 px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center justify-center">
@@ -40,12 +41,12 @@ const AboutUs = () => (
 
       {/* CTA Button */}
       <div className="text-center">
-        <a
-          href="#"
+        <Link
+          to="/about/detailed"
           className="inline-block bg-primary-orange text-primary-white font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-all hover:bg-opacity-90 hover:shadow-lg"
         >
           Learn more
-        </a>
+        </Link>
       </div>
     </div>
   </div>

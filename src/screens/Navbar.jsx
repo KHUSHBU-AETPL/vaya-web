@@ -42,17 +42,20 @@ const Navbar = () => {
               {playFootballOpen && (
                 <div className="absolute left-0 mt-2 w-56 rounded-xl shadow-2xl bg-gradient-to-br bg-primary-white from-primary-beige via-primary-orange to-primary-black z-50 overflow-hidden animate-fade-in">
                   <div className="py-2" role="menu" aria-orientation="vertical">
-                    <Link to="/football/friendly-games" className="block px-5 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white transition-all duration-300 rounded-lg">
-                      <span className="text-medium-weight text-small">Friendly Games</span>
+                    <Link to="/football/play-with-vaya" className="block px-5 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white transition-all duration-300 rounded-lg">
+                      <span className="text-medium-weight text-small">Play Football with Vaya</span>
                     </Link>
-                    <Link to="/football/leagues" className="block px-5 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white transition-all duration-300 rounded-lg">
-                      <span className="text-medium-weight text-small">Leagues</span>
+                    <Link to="/football/leagues-tournaments" className="block px-5 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white transition-all duration-300 rounded-lg">
+                      <span className="text-medium-weight text-small">Play Leagues and Tournaments</span>
                     </Link>
                     <Link to="/football/private-sessions" className="block px-5 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white transition-all duration-300 rounded-lg">
                       <span className="text-medium-weight text-small">Private Sessions</span>
                     </Link>
                     <Link to="/football/field-rentals" className="block px-5 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white transition-all duration-300 rounded-lg">
                       <span className="text-medium-weight text-small">Field Rentals</span>
+                    </Link>
+                    <Link to="/football/corporate-football" className="block px-5 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white transition-all duration-300 rounded-lg">
+                      <span className="text-medium-weight text-small">Customized Corporate Football</span>
                     </Link>
                   </div>
                 </div>
@@ -156,17 +159,20 @@ const Navbar = () => {
             </button>
             {playFootballOpenMobile && (
               <div className="pl-4 space-y-1 mt-1">
-                <Link to="/football/friendly-games" className="block px-3 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white rounded-md transition-colors duration-200">
-                  <span className="text-medium-weight text-small">Friendly Games</span>
+                <Link to="/football/play-with-vaya" className="block px-3 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white rounded-md transition-colors duration-200">
+                  <span className="text-medium-weight text-small">Play Football with Vaya</span>
                 </Link>
-                <Link to="/football/leagues" className="block px-3 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white rounded-md transition-colors duration-200">
-                  <span className="text-medium-weight text-small">Leagues</span>
+                <Link to="/football/leagues-tournaments" className="block px-3 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white rounded-md transition-colors duration-200">
+                  <span className="text-medium-weight text-small">Play Leagues and Tournaments</span>
                 </Link>
                 <Link to="/football/private-sessions" className="block px-3 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white rounded-md transition-colors duration-200">
                   <span className="text-medium-weight text-small">Private Sessions</span>
                 </Link>
                 <Link to="/football/field-rentals" className="block px-3 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white rounded-md transition-colors duration-200">
                   <span className="text-medium-weight text-small">Field Rentals</span>
+                </Link>
+                <Link to="/football/corporate-football" className="block px-3 py-2 text-primary-black hover:bg-primary-orange hover:text-primary-white rounded-md transition-colors duration-200">
+                  <span className="text-medium-weight text-small">Customized Corporate Football</span>
                 </Link>
               </div>
             )}
