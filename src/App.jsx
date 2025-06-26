@@ -16,6 +16,10 @@ import DownloadApp from './screens/DownloadApp'
 import Support from './screens/Support'
 import PrivacyPolicy from './screens/PrivacyPolicy';
 import DataDeletion from './screens/DataDeletion';
+import BecomeOrganiser from './screens/BecomeOrganiser';
+import CorporateFootball from './screens/CorporateFootball';
+import PartnerWithUs from './screens/PartnerWithUs';
+import CodeOfConduct from './screens/CodeOfConduct';
 function App() {
 
   return (
@@ -33,6 +37,10 @@ function App() {
       </Route>
       <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
       <Route path="/data-deletion" element={<DataDeletion/>}/>
+      <Route path="/become-organiser" element={<BecomeOrganiser/>}/>
+      <Route path="/corporate-football" element={<CorporateFootball/>}/>
+      <Route path="/partner-with-us" element={<PartnerWithUs/>}/>
+      <Route path="/code-of-conduct" element={<CodeOfConduct/>}/>
     </Routes>
     </>
   )
