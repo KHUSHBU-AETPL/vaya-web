@@ -8,19 +8,21 @@ const CorporateFootball = () => {
   }, []);
   
   return (
-    <div className="bg-primary-beige min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-primary-beige py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="bg-primary-white rounded-3xl shadow-lg overflow-hidden p-8 sm:p-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-primary-orange mb-8 text-center">Corporate football</h1>
-          
-          <p className="text-primary-black text-lg mb-6">
-            Do you work for a company, co-working or office and are you looking for 
-            private match, field rental or a corporate battle?
-          </p>
-          
-          <p className="text-primary-black text-lg">
-            Reach out <Link to="/support" className="text-primary-orange font-semibold hover:underline">here</Link> to find out about the possibilities.
-          </p>
+          <section className="mb-10">
+            <h1 className="text-4xl sm:text-5xl font-bold text-primary-orange mb-8 text-center">Corporate football</h1>
+            
+            <p className="text-primary-black text-lg mb-6">
+              Do you work for a company, co-working or office and are you looking for 
+              private match, field rental or a corporate battle?
+            </p>
+            
+            <p className="text-primary-black text-lg">
+              Reach out <Link to="/support" className="text-primary-orange font-semibold hover:underline">here</Link> to find out about the possibilities.
+            </p>
+          </section>
         </div>
       </div>
     </div>

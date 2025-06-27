@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-beige text-primary-black pt-16 pb-10">
-      <div className="container mx-auto px-6 space-y-20">
+    <footer className="bg-primary-beige text-primary-black pt-16 pb-10 w-full">
+      <div className="w-full px-6 space-y-20">
 
         {/* Top Sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -72,12 +72,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
                 <a
