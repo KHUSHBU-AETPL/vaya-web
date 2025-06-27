@@ -7,11 +7,12 @@ import {
   FaGooglePlay,
 } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-beige text-primary-black pt-16 pb-10">
-      <div className="container mx-auto px-6 space-y-20">
+    <footer className="bg-primary-beige text-primary-black pt-16 pb-10 w-full">
+      <div className="w-full px-6 space-y-20">
 
         {/* Top Sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -21,21 +22,38 @@ const Footer = () => {
               <span className="border-b-4 border-primary-orange pb-1">Vaya App</span>
             </h4>
             <ul className="space-y-3">
-              {[
-                "Play football",
-                "Code of conduct",
-                "Become an organiser",
-                "Corporate football",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="#"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Play football
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/code-of-conduct"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Code of conduct
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/become-organiser"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Become an organiser
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/corporate-football"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Corporate football
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -45,22 +63,62 @@ const Footer = () => {
               <span className="border-b-4 border-primary-orange pb-1">About Vaya</span>
             </h4>
             <ul className="space-y-3">
-              {[
-                "Our story",
-                "Contact",
-                "Privacy Policy",
-                "Terms of use / Service",
-                "Partner with us",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="#"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Our story
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Terms of use / Service
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/legal/booking-policy"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Booking Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/legal/refund-cancellation-policy"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Refund & Cancellation Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/partner-with-us"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Partner with us
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

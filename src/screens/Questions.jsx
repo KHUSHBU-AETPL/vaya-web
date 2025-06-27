@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 const faqData = [
   {
-    q: "How does Footy Addicts work?",
-    a: "Footy Addicts connects football lovers to local games and venues, making it easy to join or organize matches in your area.",
+    q: "How does Vaya work?",
+    a: "Vaya connects football lovers to local games and venues, making it easy to join or organize matches in your area.",
   },
   {
     q: "How can I join a game?",
@@ -11,7 +11,7 @@ const faqData = [
   },
   {
     q: "Can anybody create a new game?",
-    a: "Yes – you can help build the Footy Addicts community!",
+    a: "Yes – you can help build the Vaya community!",
   },
 ];
 

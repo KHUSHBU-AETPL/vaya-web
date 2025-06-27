@@ -56,6 +56,21 @@
 }
 
 @layer components {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: var(--font-family-sans);
+  }
+  
+  .hero-bg {
+    background-image: url('https://cdn.pixabay.com/photo/2021/10/16/21/37/garbarnia-krakow-6716100_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   body {
     font-family: var(--font-family-sans);
   }
