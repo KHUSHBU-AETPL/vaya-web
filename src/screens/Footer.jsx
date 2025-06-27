@@ -97,10 +97,18 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/legal/booking-refund-policy"
+                  to="/legal/booking-policy"
                   className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
                 >
-                  Refund and Cancellation Policy
+                  Booking Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/legal/refund-cancellation-policy"
+                  className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
+                >
+                  Refund & Cancellation Policy
                 </Link>
               </li>
               <li>

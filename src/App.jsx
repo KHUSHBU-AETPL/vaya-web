@@ -33,6 +33,7 @@ const DataDeletion = lazy(() => import('./screens/DataDeletion'));
 const CodeOfConduct = lazy(() => import('./screens/CodeOfConduct'));
 const TermsOfUse = lazy(() => import('./screens/TermsOfUse'));
 const BookingRefundCanc = lazy(() => import('./screens/BookingRefundCanc'));
+const BookingPolicy = lazy(() => import('./screens/BookingPolicy'));
 
 // Business Pages
 const BecomeOrganiser = lazy(() => import('./screens/BecomeOrganiser'));
@@ -77,7 +78,8 @@ function App() {
               <Route path="data-deletion" element={<DataDeletion />} />
               <Route path="code-of-conduct" element={<CodeOfConduct />} />
               <Route path="terms-of-use" element={<TermsOfUse />} />
-              <Route path="booking-refund-policy" element={<BookingRefundCanc />} />
+              <Route path="booking-policy" element={<BookingPolicy />} />
+              <Route path="refund-cancellation-policy" element={<BookingRefundCanc />} />
             </Route>
             
             {/* Business Routes */}
@@ -111,7 +113,8 @@ function App() {
             <Route path="/partner-with-us" element={<PartnerWithUs />} />
             <Route path="/code-of-conduct" element={<CodeOfConduct />} />
             <Route path="/terms-of-use" element={<TermsOfUse />} />
-            <Route path="/booking-refund-policy" element={<BookingRefundCanc />} />
+            <Route path="/booking-policy" element={<BookingPolicy />} />
+            <Route path="/refund-cancellation-policy" element={<BookingRefundCanc />} />
             
             {/* 404 Not Found Route */}
             <Route path="*" element={<NotFound />} />
