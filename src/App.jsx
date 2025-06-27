@@ -1,6 +1,7 @@
 import './App.css'
 import MainSection from './screens/MainSection'
 import Navbar from './screens/Navbar'
+import Footer from './screens/Footer'
 import FAQ from './screens/FAQ' // Added import statement for FAQ
 import { Routes, Route } from 'react-router'
 import AdminLayout from './admin/components/AdminLayout'
@@ -20,6 +21,8 @@ import BecomeOrganiser from './screens/BecomeOrganiser';
 import CorporateFootball from './screens/CorporateFootball';
 import PartnerWithUs from './screens/PartnerWithUs';
 import CodeOfConduct from './screens/CodeOfConduct';
+import TermsOfUse from './screens/TermsOfUse';
+import BookingRefundCanc from './screens/BookingRefundCanc';
 function App() {
 
   return (
@@ -41,7 +44,10 @@ function App() {
       <Route path="/corporate-football" element={<CorporateFootball/>}/>
       <Route path="/partner-with-us" element={<PartnerWithUs/>}/>
       <Route path="/code-of-conduct" element={<CodeOfConduct/>}/>
+      <Route path="/terms-of-use" element={<TermsOfUse/>}/>
+      <Route path="/booking-refund-policy" element={<BookingRefundCanc/>}/>
     </Routes>
+    <Footer/>
     </>
   )
 }
