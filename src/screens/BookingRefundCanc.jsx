@@ -10,7 +10,7 @@ const BookingRefundCanc = () => {
     <div className="bg-primary-beige min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="bg-primary-white rounded-3xl shadow-lg overflow-hidden p-8 sm:p-12">
-          <h2 className="text-3xl font-bold text-primary-orange mb-8"> Booking, Refund, and Game Cancellation Policy</h2>
+          <h2 className="text-3xl font-bold text-primary-orange mb-8"> Refund and Cancellation Policy</h2>
           
           <section className="mb-10">
             <div className="mb-12">

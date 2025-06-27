@@ -7,19 +7,19 @@ const Contact = () => {
   }, []);
   
   return (
-    <div className="bg-primary-beige min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-primary-white rounded-3xl shadow-lg overflow-hidden p-8 sm:p-12">
+    <div className="bg-primary-beige py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto flex justify-center">
+        <div className="bg-primary-white rounded-3xl shadow-lg overflow-hidden p-8 sm:p-12 w-full md:w-3/4 lg:w-2/3">
           <h2 className="text-3xl font-bold text-primary-orange mb-8">Contact Us</h2>
           
           <section className="mb-10">
             <div className="mb-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="flex justify-center">
                 {/* Contact Information */}
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-primary-black mb-4">Get in Touch</h3>
+                <div className="space-y-6 flex flex-col items-center">
+                  <h3 className="text-2xl font-bold text-primary-black mb-4 text-center">Get in Touch</h3>
                   
-                  <div className="space-y-4 ml-8 md:ml-12">
+                  <div className="space-y-4 text-center">
                     <div>
                       <h4 className="text-lg font-semibold text-primary-black">Address:</h4>
                       <p className="text-primary-black">
@@ -52,18 +52,18 @@ const Contact = () => {
                 </div>
                 
                 {/* Map or Image */}
-                <div className="bg-gray-100 rounded-lg flex items-center justify-center min-h-[300px]">
+                {/* <div className="bg-gray-100 rounded-lg flex items-center justify-center min-h-[300px]">
                   <div className="text-center p-6">
                     <p className="text-lg text-gray-500">Map will be integrated here</p>
                     <p className="text-sm text-gray-400 mt-2">Coming soon</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             
             <div className="border-t border-gray-200 my-8"></div>
             
-            <div className="mb-12">
+            {/* <div className="mb-12">
               <h3 className="text-2xl font-bold text-primary-black mb-4">Contact Form</h3>
               <p className="text-primary-black text-lg mb-6 ml-8 md:ml-12">
                 Have a question or want to get in touch? Fill out the form below and we'll get back to you as soon as possible.
@@ -129,7 +129,7 @@ const Contact = () => {
                   </button>
                 </div>
               </form>
-            </div>
+            </div> */}
             
             {/* <div className="mt-12 p-6 bg-gray-100 rounded-xl">
               <h3 className="text-xl font-bold text-primary-black mb-4">Follow Us</h3>

@@ -119,20 +119,7 @@ const PlayFootballWithVaya = () => {
                 </div>
               </div>
               
-              <div className="max-w-3xl mx-auto text-center mt-12">
-                <p className="text-primary-black text-lg mb-6 leading-relaxed">
-                  Whatever your style or schedule, Vaya is here to bring football closer to you.
-                </p>
-                <p className="text-primary-black text-lg mb-6 leading-relaxed">
-                  Below you can read an explanation of all products.
-                </p>
-                <p className="text-primary-black text-lg mb-6 leading-relaxed">
-                  For each product, the lay our can be like this: EXPLANATION + BUTTON (that leads to the app or support, depending on the product + PHOTO (related to the offer)
-                </p>
-                <p className="text-primary-black text-lg mb-6 leading-relaxed">
-                  In the case of the section 'Leagues and Tournaments' we can add the FAQ specifically for Leagues and Tournaments
-                </p>
-              </div>
+  
             </div>
 
             <div className="mt-12 p-8 bg-gradient-to-r from-primary-beige via-primary-orange/10 to-primary-beige rounded-2xl shadow-inner">

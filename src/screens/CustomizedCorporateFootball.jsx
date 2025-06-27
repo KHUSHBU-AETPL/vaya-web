@@ -88,7 +88,7 @@ const CustomizedCorporateFootball = () => {
 
             <div className="border-t border-gray-200 my-8"></div>
 
-            <div className="mb-12">
+            {/* <div className="mb-12">
               <h3 className="text-2xl font-bold text-primary-black mb-6 text-center">Benefits for Your Organization</h3>
               <div className="grid md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
                 <div className="bg-gray-50 p-6 rounded-xl">
@@ -108,7 +108,7 @@ const CustomizedCorporateFootball = () => {
                   <p className="text-primary-black">We handle all the logistics, allowing you to focus on enjoying the experience with your team.</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="mt-12 p-8 bg-gradient-to-r from-primary-beige via-primary-orange/10 to-primary-beige rounded-2xl shadow-inner">
               <div className="max-w-3xl mx-auto text-center">

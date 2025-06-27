@@ -88,19 +88,19 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link
-                  to="/terms-of-use"
+                <a
+                  href="#"
                   className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
                 >
                   Terms of use / Service
-                </Link>
+                </a>
               </li>
               <li>
                 <Link
-                  to="/booking-refund-policy"
+                  to="/legal/booking-refund-policy"
                   className="inline-block transition-all duration-200 text-sm text-gray-800 hover:text-primary-orange hover:pl-2"
                 >
-                  Booking, Refund and Cancellation Policy
+                  Refund and Cancellation Policy
                 </Link>
               </li>
               <li>
