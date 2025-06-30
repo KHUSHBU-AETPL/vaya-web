@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-primary-beige shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8"> {/* Changed to w-full for full width, kept padding */} 
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center"> {/* Added items-center for vertical alignment */}
