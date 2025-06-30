@@ -6,6 +6,7 @@ import iconGroup from '../assets/icons/football/Group.svg';
 import iconField from '../assets/icons/football/Field.svg';
 import iconMedal from '../assets/icons/football/Medal.svg';
 
+
 const PlayFootballSection = () => {
   const options = [
     {
@@ -36,11 +37,12 @@ const PlayFootballSection = () => {
   ];
 
   return (
+    <>
     <div className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-primary-beige">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <span className="inline-block bg-secondary-orange-25 text-primary-orange text-xs font-semibold px-3 py-1 rounded-full mb-4">PLAY FOOTBALL</span> {/* TODO(i18n): "PLAY FOOTBALL" */}
-        <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight text-primary-black mb-6">
-          Play Football With Vaya {/* TODO(i18n): Main heading */}
+        <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+          <span className="text-primary-orange">Play Football</span>{" "}
+          <span className="text-primary-black">With Vaya</span> {/* TODO(i18n): Main heading */}
         </h1>
         <p className="text-lg text-primary-black max-w-xl mx-auto">
           Football has never been this easy and fun! Whether you're looking to join a quick pick-up game or dive into a league, Vaya makes it simple to get on the pitch and enjoy the game your way. {/* TODO(i18n): Description */}
@@ -84,6 +86,8 @@ const PlayFootballSection = () => {
         </a>
       </div>
     </div>
+ 
+    </>
   );
 };
 

@@ -13,6 +13,10 @@ import DownloadApp from './screens/DownloadApp'
 import Support from './screens/Support'
 import PrivacyPolicy from './screens/PrivacyPolicy';
 import DataDeletion from './screens/DataDeletion';
+import PlayFootballSection from './screens/PlayFootballSection';
+import PlayFootballWithVaya from './screens/PlayFootballWithVaya';
+import PickupGamesSection from './screens/PickupGamesSection';
+import PrivateSessionsSection from './screens/PrivateSessionsSection';
 function App() {
 
   return (
@@ -24,8 +28,15 @@ function App() {
       <Route path="/about" element={<AboutScreen/>}/>
       <Route path="/download" element={<DownloadApp/>}/>
       <Route path="/support" element={<Support/>}/>
-        <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+      <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
       <Route path="/data-deletion" element={<DataDeletion/>}/>
+      <Route path="/play-football" element={<PlayFootballSection/>}/>
+      <Route path="/play-football/play-football" element={<PlayFootballWithVaya/>}/>
+      <Route path="/play-football/pickup-games" element={<PickupGamesSection/>}/>
+      <Route path="/play-football/leagues-tournaments" element={<PlayFootballSection/>}/>
+      <Route path="/play-football/private-sessions" element={<PrivateSessionsSection/>}/>
+      <Route path="/play-football/field-rentals" element={<PlayFootballSection/>}/>
+      <Route path="/play-football/corporate-football" element={<PlayFootballSection/>}/>
     </Routes>
     </>
   )
