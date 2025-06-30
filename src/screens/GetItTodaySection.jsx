@@ -1,6 +1,6 @@
 import React from 'react';
-import appStoreBadge from '../assets/icons/App Store.svg';
-import googlePlayBadge from '../assets/icons/Play Store.svg';
+import appStoreBadge from '../assets/icons/store-badges/App Store download button.svg';
+import googlePlayBadge from '../assets/icons/store-badges/play Store download button.svg';
 import phoneMockup from '../assets/images/16 Pro Max.svg'; // Using the new phone mockup image
 
 const GetItTodaySection = () => {

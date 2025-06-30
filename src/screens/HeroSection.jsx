@@ -1,6 +1,6 @@
 import React from 'react';
-import appStoreBadge from '../assets/App Store download button.svg'; // New App Store SVG
-import googlePlayBadge from '../assets/images/play Store download button.svg'; // New Play Store SVG
+import appStoreBadge from '../assets/icons/store-badges/App Store download button.svg'; // App Store SVG
+import googlePlayBadge from '../assets/icons/store-badges/play Store download button.svg'; // Play Store SVG
 import phoneMockup from '../assets/images/Header.svg'; // Using Header.svg for the phone mockup
 import AboutScreen from './AboutScreen'; // Import AboutScreen to render it after HeroSection
 import PlayFootballSection from './PlayFootballSection'; // Import PlayFootballSection to render it after AboutScreen

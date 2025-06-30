@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImage from '../assets/Image.svg'; // Using Image.svg for the About section image
+import aboutImage from '../assets/images/Image.svg'; // Using Image.svg for the About section image
 
 const AboutScreen = () => {
   const values = [

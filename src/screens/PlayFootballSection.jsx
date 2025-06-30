@@ -1,10 +1,10 @@
 import React from 'react';
-import footballPlayersImage from '../assets/Playfootball.svg'; // Using Playfootball.svg for the main image
-import iconSoccer from '../assets/icons/Soccer.svg';
-import iconTrophy from '../assets/icons/Trophy.svg';
-import iconGroup from '../assets/icons/Group.svg';
-import iconField from '../assets/icons/Field.svg';
-import iconMedal from '../assets/icons/Medal.svg';
+import footballPlayersImage from '../assets/images/Playfootball.svg'; // Using Playfootball.svg for the main image
+import iconSoccer from '../assets/icons/football/Soccer.svg';
+import iconTrophy from '../assets/icons/football/Trophy.svg';
+import iconGroup from '../assets/icons/football/Group.svg';
+import iconField from '../assets/icons/football/Field.svg';
+import iconMedal from '../assets/icons/football/Medal.svg';
 
 const PlayFootballSection = () => {
   const options = [
