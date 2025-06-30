@@ -3,6 +3,11 @@ import appStoreBadge from '../assets/App Store download button.svg'; // New App 
 import googlePlayBadge from '../assets/images/play Store download button.svg'; // New Play Store SVG
 import phoneMockup from '../assets/images/Header.svg'; // Using Header.svg for the phone mockup
 import AboutScreen from './AboutScreen'; // Import AboutScreen to render it after HeroSection
+import PlayFootballSection from './PlayFootballSection'; // Import PlayFootballSection to render it after AboutScreen
+import GetItTodaySection from "./GetItTodaySection";
+import FAQSection from "./FAQSection";
+import SupportSection from "./SupportSection";
+import FooterSection from "./FooterSection";
 
 const HeroSection = () => {
   return (
@@ -35,6 +40,11 @@ const HeroSection = () => {
         </div>
       </section>
       <AboutScreen /> {/* Render AboutScreen directly after HeroSection */}
+      <PlayFootballSection /> {/* Render PlayFootballSection after AboutScreen */}
+      <GetItTodaySection />
+      <FAQSection />
+      <SupportSection />
+      <FooterSection />
     </>
   );
 };
