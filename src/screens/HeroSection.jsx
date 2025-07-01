@@ -7,7 +7,6 @@ import PlayFootballSection from './PlayFootballSection'; // Import PlayFootballS
 import GetItTodaySection from "./GetItTodaySection";
 import FAQSection from "./FAQSection";
 import SupportSection from "./SupportSection";
-import FooterSection from "./FooterSection";
 
 const HeroSection = () => {
   return (
@@ -44,7 +43,7 @@ const HeroSection = () => {
       <GetItTodaySection />
       <FAQSection />
       <SupportSection />
-      <FooterSection />
+    
     </>
   );
 };

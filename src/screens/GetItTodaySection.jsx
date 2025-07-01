@@ -62,21 +62,21 @@ const GetItTodaySection = () => {
           <div className="flex flex-col lg:flex-row items-center relative z-10 py-8 md:py-10 lg:py-0">
             {/* Left Content */}
             <div className="w-full lg:w-1/2 px-8 md:px-10 lg:px-16 text-white">
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl text-left font-bold leading-tight mb-6">
                 Get it today!
               </h2>
               
               <ul className="mb-8 space-y-3">
-                <li className="flex items-start">
-                  <span className="inline-block mr-3 mt-1.5">•</span>
+                <li className="flex items-center">
+                  <span className="inline-block mr-3">•</span>
                   <span>Download the Vaya app</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="inline-block mr-3 mt-1.5">•</span>
+                <li className="flex items-center">
+                  <span className="inline-block mr-3">•</span>
                   <span>Find your pick-up game or league</span>
                 </li>
-                <li className="flex items-start">
-                  <span className="inline-block mr-3 mt-1.5">•</span>
+                <li className="flex items-center">
+                  <span className="inline-block mr-3">•</span>
                   <span>Book and enjoy!</span>
                 </li>
               </ul>

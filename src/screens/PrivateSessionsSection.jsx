@@ -19,22 +19,22 @@ const PrivateSessionsSection = () => {
             
             {/* Right column - Text content */}
             <div className="lg:w-1/2 w-full">
-              <h2 className="text-2xl font-bold text-primary-black mb-6">Private sessions</h2>
+              <h2 className="text-2xl font-bold text-left text-primary-black mb-6">Private sessions</h2>
               
-              <p className="text-base text-primary-black mb-3">
+              <p className="text-base text-left text-primary-black mb-3">
                 Private sessions are exclusive football matches you can create for your group.
               </p>
               
-              <p className="text-base text-primary-black mb-3">
+              <p className="text-base text-left text-primary-black mb-3">
                 We can set up a private game for you in the app that's only visible and accessible to people with a specific link.
               </p>
               
-              <p className="text-base text-primary-black mb-6">
+              <p className="text-base text-left text-primary-black mb-6">
                 This way, you control who joins, making it perfect for friends, teams, or special events.
               </p>
               
               {/* CTA Button */}
-              <div>
+              <div className="text-left">
                 <a 
                   href="#" 
                   className="bg-primary-orange text-primary-white px-4 py-2 rounded-lg inline-block"

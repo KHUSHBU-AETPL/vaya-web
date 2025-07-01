@@ -14,16 +14,19 @@ import FooterSection from './screens/FooterSection'
 
 // Lazy-loaded page components
 const HeroSection = lazy(() => import('./screens/HeroSection'))
-const FAQ = lazy(() => import('./screens/FAQ'))
+const FAQSection = lazy(() => import('./screens/FAQSection'))
 const AboutScreen = lazy(() => import('./screens/AboutScreen'))
-const DownloadApp = lazy(() => import('./screens/DownloadApp'))
-const Support = lazy(() => import('./screens/Support'))
-const PrivacyPolicy = lazy(() => import('./screens/PrivacyPolicy'))
-const DataDeletion = lazy(() => import('./screens/DataDeletion'))
+const SupportSection = lazy(() => import('./screens/SupportSection'))
 const PlayFootballSection = lazy(() => import('./screens/PlayFootballSection'))
 const PlayFootballWithVaya = lazy(() => import('./screens/PlayFootballWithVaya'))
 const PickupGamesSection = lazy(() => import('./screens/PickupGamesSection'))
 const PrivateSessionsSection = lazy(() => import('./screens/PrivateSessionsSection'))
+const PibeLeaguesTournamentsScreen = lazy(() => import('./screens/PibeLeaguesTournamentsScreen'))
+const FieldRentalsScreen = lazy(() => import('./screens/FieldRentalsScreen'))
+const CorporateFootballScreen = lazy(() => import('./screens/CorporateFootballScreen'))
+const ContactScreen = lazy(() => import('./screens/ContactScreen'))
+const RefundPolicyScreen = lazy(() => import('./screens/RefundPolicyScreen'))
+const BookingPolicyScreen = lazy(() => import('./screens/BookingPolicyScreen'))
 // Loading component for suspense fallback
 const LoadingSpinner = () => (
   <div className="loading-spinner">
@@ -67,14 +70,14 @@ function App() {
     <Routes>
       {/* Main routes */}
       <Route path="/" element={<Layout><HeroSection /></Layout>} />
-      <Route path="/faq" element={<Layout><FAQ /></Layout>} />
+      <Route path="/faq" element={<Layout><FAQSection /></Layout>} />
       <Route path="/about" element={<Layout><AboutScreen /></Layout>} />
-      <Route path="/download" element={<Layout><DownloadApp /></Layout>} />
-      <Route path="/support" element={<Layout><Support /></Layout>} />
+      <Route path="/support" element={<Layout><SupportSection /></Layout>} />
       
       {/* Legal routes */}
-      <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
-      <Route path="/data-deletion" element={<Layout><DataDeletion /></Layout>} />
+      <Route path="/contact" element={<Layout><ContactScreen /></Layout>} />
+      <Route path="/refund-policy" element={<Layout><RefundPolicyScreen /></Layout>} />
+      <Route path="/booking-policy" element={<Layout><BookingPolicyScreen /></Layout>} />
       
       {/* Play Football section with nested routes */}
       <Route path="/play-football" element={<Layout><PlayFootballSection /></Layout>} />
@@ -82,10 +85,10 @@ function App() {
         <Route index element={<Navigate to="/play-football" replace />} />
         <Route path="play" element={<Layout><PlayFootballWithVaya /></Layout>} />
         <Route path="pickup-games" element={<Layout><PickupGamesSection /></Layout>} />
-        <Route path="leagues-tournaments" element={<Layout><PlayFootballSection /></Layout>} />
+        <Route path="leagues-tournaments" element={<Layout><PibeLeaguesTournamentsScreen /></Layout>} />
         <Route path="private-sessions" element={<Layout><PrivateSessionsSection /></Layout>} />
-        <Route path="field-rentals" element={<Layout><PlayFootballSection /></Layout>} />
-        <Route path="corporate" element={<Layout><PlayFootballSection /></Layout>} />
+        <Route path="field-rentals" element={<Layout><FieldRentalsScreen /></Layout>} />
+        <Route path="corporate" element={<Layout><CorporateFootballScreen /></Layout>} />
       </Route>
       
       {/* Redirect for old URLs */}
