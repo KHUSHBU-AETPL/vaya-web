@@ -4,9 +4,9 @@ import pibeLeaguesImage from '../assets/images/untitled-75 (1).svg';
 const PibeLeaguesTournamentsScreen = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-primary-beige">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Content Container */}
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24">
           {/* Left Content */}
           <div className="lg:w-1/2 order-2 lg:order-1">
             {/* Header Section */}
@@ -59,7 +59,7 @@ const PibeLeaguesTournamentsScreen = () => {
                 League FAQ
               </p>
               <p className="text-sm text-left text-primary-black mb-6">
-                julianandres4343@gmail.com, I added 2 links here so people 
+                <span className="text-primary-orange">julianandres4343@gmail.com</span>, I added 2 links here so people 
                 can find all info on your League Section
               </p>
             </div>

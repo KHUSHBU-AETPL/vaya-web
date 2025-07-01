@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import logo from '../assets/images/logo_vaya.png';
+import logo from '../../../assets/images/logo_vaya.png';
 import { Link, useLocation } from 'react-router-dom';
 import { FiChevronDown, FiX, FiMenu, FiGlobe } from 'react-icons/fi';
+import Button from '../../common/Button';
 
 const Navbar = () => {
   const location = useLocation();
@@ -81,7 +82,7 @@ const Navbar = () => {
   }, [handleScroll]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-primary-beige shadow-md">
+    <nav className="sticky top-0 z-50 bg-primary-beige">
       <div className="w-full px-4 sm:px-6 lg:px-8"> {/* Changed to w-full for full width, kept padding */} 
         <div className="flex justify-between h-16">
           {/* Logo */}
@@ -110,45 +111,45 @@ const Navbar = () => {
                   <div className="py-1" role="menu" aria-orientation="vertical">
                     <Link 
                       to="/play-football/play-football"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
                       onClick={() => setPlayFootballOpen(false)}
                     >
-                      Play Football with Vaya
+                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Play Football with Vaya</span>
                     </Link>
                     <Link 
                       to="/play-football/pickup-games"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
                       onClick={() => setPlayFootballOpen(false)}
                     >
-                      Pick-up Games
+                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Pick-up Games</span>
                     </Link>
                     <Link 
                       to="/play-football/leagues-tournaments"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
                       onClick={() => setPlayFootballOpen(false)}
                     >
-                      Pibe Leagues and Tournaments
+                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Pibe Leagues and Tournaments</span>
                     </Link>
                     <Link 
                       to="/play-football/private-sessions"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
                       onClick={() => setPlayFootballOpen(false)}
                     >
-                      Private Sessions
+                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Private Sessions</span>
                     </Link>
                     <Link 
                       to="/play-football/field-rentals"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
                       onClick={() => setPlayFootballOpen(false)}
                     >
-                      Field Rentals
+                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Field Rentals</span>
                     </Link>
                     <Link 
                       to="/play-football/corporate-football"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
                       onClick={() => setPlayFootballOpen(false)}
                     >
-                      Customized Corporate Football
+                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Customized Corporate Football</span>
                     </Link>
                   </div>
                 </div>
@@ -172,17 +173,17 @@ const Navbar = () => {
                   <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                     <Link 
                       to="/booking-policy"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
                       onClick={() => setPoliciesOpen(false)}
                     >
-                      Booking Policy
+                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Booking Policy</span>
                     </Link>
                     <Link 
                       to="/refund-policy"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
                       onClick={() => setPoliciesOpen(false)}
                     >
-                      Refund and Cancellation Policy
+                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Refund and Cancellation Policy</span>
                     </Link>
                   </div>
                 </div>
@@ -212,10 +213,12 @@ const Navbar = () => {
                       <button
                         key={lang.code}
                         onClick={() => { setSelectedLang(lang.code); setLangOpen(false); }}
-                        className={`block w-full text-left px-4 py-2 text-sm ${selectedLang === lang.code ? 'text-primary-orange font-medium' : 'text-gray-700'} hover:bg-gray-100 hover:text-primary-orange`}
+                        className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200`}
                         role="menuitem"
                       >
-                        {lang.name} ({lang.code})
+                        <span className={`${selectedLang === lang.code ? 'text-primary-orange font-medium' : 'text-gray-700'} hover:text-primary-orange transition-colors duration-200`}>
+                          {lang.name} ({lang.code})
+                        </span>
                       </button>
                     ))}
                   </div>
@@ -224,8 +227,10 @@ const Navbar = () => {
             </div>
 
             {/* Get The App Button */}
-            <a href="https://play.google.com/store/apps/details?id=com.vaya.app" target="_blank" rel="noopener noreferrer" className="bg-primary-orange text-primary-white px-6 py-2 rounded-lg hover:bg-warning-dark transition-colors duration-300 shadow-sm hover:shadow-md">
-              <span className="text-semibold text-medium text-primary-white">Get The App</span>
+            <a href="https://play.google.com/store/apps/details?id=com.vaya.app" target="_blank" rel="noopener noreferrer">
+              <Button variant="primary" size="md">
+                Get The App
+              </Button>
             </a>
           </div>
 
@@ -267,42 +272,42 @@ const Navbar = () => {
                 className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="text-medium">Play Football with Vaya</span>
+                <span className="text-medium hover:text-primary-orange transition-colors duration-200">Play Football with Vaya</span>
               </Link>
               <Link 
                 to="/play-football/pickup-games"
                 className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="text-medium">Pick-up Games</span>
+                <span className="text-medium hover:text-primary-orange transition-colors duration-200">Pick-up Games</span>
               </Link>
               <Link 
                 to="/play-football/leagues-tournaments"
                 className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="text-medium">Pibe Leagues and Tournaments</span>
+                <span className="text-medium hover:text-primary-orange transition-colors duration-200">Pibe Leagues and Tournaments</span>
               </Link>
               <Link 
                 to="/play-football/private-sessions"
                 className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="text-medium">Private Sessions</span>
+                <span className="text-medium hover:text-primary-orange transition-colors duration-200">Private Sessions</span>
               </Link>
               <Link 
                 to="/play-football/field-rentals"
                 className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="text-medium">Field Rentals</span>
+                <span className="text-medium hover:text-primary-orange transition-colors duration-200">Field Rentals</span>
               </Link>
               <Link 
                 to="/play-football/corporate-football"
                 className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span className="text-medium">Customized Corporate Football</span>
+                <span className="text-medium hover:text-primary-orange transition-colors duration-200">Customized Corporate Football</span>
               </Link>
             </div>
           </div>
@@ -328,14 +333,14 @@ const Navbar = () => {
                   className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span className="text-medium hover:text-primary-orange">Booking Policy</span>
+                  <span className="text-medium hover:text-primary-orange transition-colors duration-200">Booking Policy</span>
                 </Link>
                 <Link 
                   to="/refund-policy"
                   className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span className="text-medium hover:text-primary-orange">Refund Policy</span>
+                  <span className="text-medium hover:text-primary-orange transition-colors duration-200">Refund Policy</span>
                 </Link>
               </div>
             )}
@@ -361,9 +366,11 @@ const Navbar = () => {
                   <button
                     key={lang.code}
                     onClick={() => { setSelectedLang(lang.code); setLangOpen(false); }}
-                    className={`block w-full text-left py-1 text-sm ${selectedLang === lang.code ? 'text-primary-orange font-medium' : 'text-primary-black'} hover:text-primary-orange`}
+                    className="block w-full text-left py-1 text-sm transition-colors duration-200"
                   >
-                    {lang.name} ({lang.code})
+                    <span className={`${selectedLang === lang.code ? 'text-primary-orange font-medium' : 'text-primary-black'} hover:text-primary-orange transition-colors duration-200`}>
+                      {lang.name} ({lang.code})
+                    </span>
                   </button>
                 ))}
               </div>
@@ -375,9 +382,11 @@ const Navbar = () => {
             href="https://play.google.com/store/apps/details?id=com.vaya.app" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="block mt-4 text-left bg-primary-orange text-primary-white px-4 py-3 rounded-lg hover:bg-warning-dark transition-colors duration-300 shadow-sm hover:shadow-md"
+            className="block mt-4 text-left"
           >
-            <span className="text-semibold text-medium text-primary-white">Get The App</span>
+            <Button variant="primary" size="md" fullWidth={true}>
+              Get The App
+            </Button>
           </a>
         </div>
       </div>

@@ -3,7 +3,7 @@ import contactImage from '../assets/images/untitled-75 (1).svg'; // Reusing the 
 
 const ContactScreen = () => {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-primary-beige">
+    <div className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-primary-white">
       <div className="max-w-3xl mx-auto">
         {/* Content Container */}
         <div className="flex flex-col items-center">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import supportImage from '../assets/images/Vaya_Notifications 1.svg';
 
 const SupportSection = () => {
@@ -18,9 +19,9 @@ const SupportSection = () => {
               <p className="text-lg text-primary-dark-gray mb-8">
                 Can't find the answer you're looking for? Please contact our team. {/* TODO(i18n): "Can't find the answer you're looking for? Please contact our team." */}
               </p>
-              <a href="#" className="inline-block bg-primary-orange text-white font-semibold px-6 py-3 rounded-md hover:bg-primary-orange-dark transition-colors duration-300">
+              <Link to="/contact-old" className="inline-block bg-primary-orange text-white font-semibold px-6 py-3 rounded-md hover:bg-primary-orange-dark transition-colors duration-300">
                 Contact Us {/* TODO(i18n): "Contact Us" */}
-              </a>
+              </Link>
             </div>
 
             {/* Right Image */}

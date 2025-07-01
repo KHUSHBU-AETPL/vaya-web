@@ -5,9 +5,9 @@ const PickupGamesSection = () => {
   return (
     <>
       <div className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-primary-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Two-column layout for larger screens */}
-          <div className="flex flex-col lg:flex-row items-center gap-12 mb-12">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 mb-12">
             {/* Left column - Image */}
             <div className="lg:w-1/2 w-full">
               <img 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import appStoreBadge from '../assets/icons/store-badges/App Store download button.svg';
-import googlePlayBadge from '../assets/icons/store-badges/play Store download button.svg';
+import appStoreBadge from '../assets/icons/store-badges/App Store.svg';
+import googlePlayBadge from '../assets/icons/store-badges/Play Store.svg';
 import phoneMockup from '../assets/images/CTA.svg'; // Phone mockup image
 
 const GetItTodaySection = () => {
@@ -30,9 +30,9 @@ const GetItTodaySection = () => {
   }, []);
 
   return (
-    <section className="bg-primary-beige py-12 md:py-16 lg:py-20 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-primary-orange rounded-3xl relative overflow-hidden">
+    <section className="bg-primary-beige py-10 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-primary-orange rounded-2xl sm:rounded-3xl relative overflow-hidden">
           {/* Background curved lines */}
           <div className="absolute top-0 right-0 w-full h-full overflow-hidden">
             <svg 
@@ -61,27 +61,27 @@ const GetItTodaySection = () => {
           
           <div className="flex flex-col lg:flex-row items-center relative z-10 py-8 md:py-10 lg:py-0">
             {/* Left Content */}
-            <div className="w-full lg:w-1/2 px-8 md:px-10 lg:px-16 text-white">
-              <h2 className="text-4xl md:text-5xl text-left font-bold leading-tight mb-6">
+            <div className="w-full lg:w-1/2 px-6 sm:px-8 md:px-10 lg:px-16 text-white">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl text-left font-bold leading-tight mb-4 sm:mb-6">
                 Get it today!
               </h2>
               
-              <ul className="mb-8 space-y-3">
+              <ul className="mb-6 sm:mb-8 space-y-2 sm:space-y-3">
                 <li className="flex items-center">
-                  <span className="inline-block mr-3">•</span>
-                  <span>Download the Vaya app</span>
+                  <span className="inline-block mr-3 text-lg sm:text-xl">•</span>
+                  <span className="text-sm sm:text-base">Download the Vaya app</span>
                 </li>
                 <li className="flex items-center">
-                  <span className="inline-block mr-3">•</span>
-                  <span>Find your pick-up game or league</span>
+                  <span className="inline-block mr-3 text-lg sm:text-xl">•</span>
+                  <span className="text-sm sm:text-base">Find your pick-up game or league</span>
                 </li>
                 <li className="flex items-center">
-                  <span className="inline-block mr-3">•</span>
-                  <span>Book and enjoy!</span>
+                  <span className="inline-block mr-3 text-lg sm:text-xl">•</span>
+                  <span className="text-sm sm:text-base">Book and enjoy!</span>
                 </li>
               </ul>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 <a 
                   href="#" 
                   target="_blank" 
@@ -91,7 +91,7 @@ const GetItTodaySection = () => {
                   <img 
                     src={appStoreBadge} 
                     alt="Download on the App Store" 
-                    className="h-10 md:h-12" 
+                    className="h-9 sm:h-10 md:h-12" 
                   />
                 </a>
                 <a 
@@ -103,21 +103,21 @@ const GetItTodaySection = () => {
                   <img 
                     src={googlePlayBadge} 
                     alt="Get it on Google Play" 
-                    className="h-10 md:h-12" 
+                    className="h-9 sm:h-10 md:h-12" 
                   />
                 </a>
               </div>
             </div>
 
             {/* Right Image Container */}
-            <div className="w-full lg:w-1/2 relative h-[300px] md:h-[400px] lg:h-[450px] mt-8 lg:mt-0">
+            <div className="w-full lg:w-1/2 relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px] mt-6 sm:mt-8 lg:mt-0">
               {/* Phone Image */}
-              <div className="absolute inset-0 flex items-end justify-center lg:justify-end lg:pr-12 xl:pr-12">
+              <div className="absolute inset-0 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-12">
                 <img 
                   ref={phoneRef}
                   src={phoneMockup} 
                   alt="Vaya App on Phone" 
-                  className="h-auto w-auto max-h-full lg:max-h-[450px] object-contain z-10"
+                  className="h-auto w-auto max-h-full max-w-[90%] sm:max-w-[85%] lg:max-w-[90%] lg:max-h-[450px] object-contain z-10"
                 />  
               </div>
             </div>

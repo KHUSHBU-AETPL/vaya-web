@@ -4,9 +4,9 @@ import footballImage from '../assets/images/untitled-59.svg';
 const PlayFootballWithVaya = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-primary-beige">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Two-column layout for larger screens */}
-        <div className="flex flex-col lg:flex-row items-center gap-36">
+        <div className="flex flex-col lg:flex-row items-center gap-36 xl:gap-48">
           {/* Left column - Text content */}
           <div className="lg:w-1/2 text-left w-full">
             <h1>

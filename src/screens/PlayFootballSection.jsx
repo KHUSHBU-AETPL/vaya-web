@@ -39,7 +39,7 @@ const PlayFootballSection = () => {
   return (
     <>
     <div className="w-full px-4 sm:px-6 lg:px-8 py-16 bg-primary-beige">
-      <div className="max-w-6xl mx-auto text-center mb-12">
+      <div className="max-w-7xl mx-auto text-center mb-12">
         <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
           <span className="text-primary-orange">Play Football</span>{" "}
           <span className="text-primary-black">With Vaya</span> {/* TODO(i18n): Main heading */}
@@ -49,7 +49,7 @@ const PlayFootballSection = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12 mt-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 xl:gap-24 mt-16">
         {/* Left Content - Options List */}
         <div className="lg:w-1/2 w-full">
           <h2 className="text-2xl font-bold text-primary-black mb-6 text-left">Explore Our Options:</h2> {/* TODO(i18n): "Explore Our Options:" */}
@@ -79,7 +79,7 @@ const PlayFootballSection = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto text-center mt-12">
+      <div className="max-w-7xl mx-auto text-center mt-12">
         <a href="#" className="text-primary-orange font-semibold flex items-center justify-center gap-2"> {/* TODO(link): Add actual link */}
           Learn more
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import appStoreButton from '../assets/icons/store-badges/App Store download button.svg';
-import playStoreButton from '../assets/icons/store-badges/play Store download button.svg';
-import facebookIcon from '../assets/icons/social/Facebook.svg';
-import instagramIcon from '../assets/icons/social/Instagram.svg';
-import vayaLogo from '../assets/logos/Logo_Vaya!.png'; // Updated path to use logos directory
+import appStoreButton from '../../../assets/icons/store-badges/App Store download button.svg';
+import playStoreButton from '../../../assets/icons/store-badges/play Store download button.svg';
+import facebookIcon from '../../../assets/icons/social/Facebook.svg';
+import instagramIcon from '../../../assets/icons/social/Instagram.svg';
+import vayaLogo from '../../../assets/logos/Logo_Vaya!.png'; // Updated path to use logos directory
 
 const FooterLink = ({ href, children }) => {
   const [isActive, setIsActive] = useState(false);
