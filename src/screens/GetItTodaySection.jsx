@@ -1,37 +1,127 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import appStoreBadge from '../assets/icons/store-badges/App Store download button.svg';
 import googlePlayBadge from '../assets/icons/store-badges/play Store download button.svg';
-import phoneMockup from '../assets/images/16 Pro Max.svg'; // Using the new phone mockup image
+import phoneMockup from '../assets/images/CTA.svg'; // Phone mockup image
 
 const GetItTodaySection = () => {
+  const phoneRef = useRef(null);
+
+  // Ensure the phone image is properly displayed on all screen sizes
+  useEffect(() => {
+    const handleResize = () => {
+      if (phoneRef.current) {
+        // Force a repaint on resize to ensure the image displays correctly
+        phoneRef.current.style.display = 'none';
+        setTimeout(() => {
+          if (phoneRef.current) {
+            phoneRef.current.style.display = 'block';
+          }
+        }, 10);
+      }
+    };
+
+    // Initial call and event listener
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <section className="bg-primary-beige py-16 lg:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-primary-orange rounded-3xl p-8 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden">
-        {/* Left Content */}
-        <div className="lg:w-1/2 text-center lg:text-left text-primary-white">
-          <div className="pl-16 lg:pl-24">
-            <h2 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-              Get it today! {/* TODO(i18n): "Get it today!" */}
-            </h2>
-            <ul className="list-disc list-inside text-lg mb-8 space-y-2">
-              <li>Download the Vaya app {/* TODO(i18n): "Download the Vaya app" */}</li>
-              <li>Find your pick-up game or league {/* TODO(i18n): "Find your pick-up game or league" */}</li>
-              <li>Book and enjoy! {/* TODO(i18n): "Book and enjoy!" */}</li>
-            </ul>
-            <div className="flex justify-center lg:justify-start gap-4">
-              <a href="#" target="_blank" rel="noopener noreferrer"> {/* TODO(link): Add actual App Store link */}
-                <img src={appStoreBadge} alt="Download on the App Store" className="h-12" /> {/* TODO(i18n): "Download on the App Store" for alt text */}
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer"> {/* TODO(link): Add actual Google Play link */}
-                <img src={googlePlayBadge} alt="Get it on Google Play" className="h-12" /> {/* TODO(i18n): "Get it on Google Play" for alt text */}
-              </a>
+    <section className="bg-primary-beige py-12 md:py-16 lg:py-20 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-primary-orange rounded-3xl relative overflow-hidden">
+          {/* Background curved lines */}
+          <div className="absolute top-0 right-0 w-full h-full overflow-hidden">
+            <svg 
+              className="absolute top-0 right-0 h-full" 
+              width="300" 
+              height="100%" 
+              viewBox="0 0 300 600" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMinYMin slice"
+            >
+              <path 
+                d="M150 0C150 0 300 150 300 300C300 450 150 600 150 600" 
+                stroke="rgba(255,255,255,0.1)" 
+                strokeWidth="2" 
+                fill="none"
+              />
+              <path 
+                d="M100 0C100 0 250 150 250 300C250 450 100 600 100 600" 
+                stroke="rgba(255,255,255,0.1)" 
+                strokeWidth="2" 
+                fill="none"
+              />
+            </svg>
+          </div>
+          
+          <div className="flex flex-col lg:flex-row items-center relative z-10 py-8 md:py-10 lg:py-0">
+            {/* Left Content */}
+            <div className="w-full lg:w-1/2 px-8 md:px-10 lg:px-16 text-white">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                Get it today!
+              </h2>
+              
+              <ul className="mb-8 space-y-3">
+                <li className="flex items-start">
+                  <span className="inline-block mr-3 mt-1.5">•</span>
+                  <span>Download the Vaya app</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block mr-3 mt-1.5">•</span>
+                  <span>Find your pick-up game or league</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block mr-3 mt-1.5">•</span>
+                  <span>Book and enjoy!</span>
+                </li>
+              </ul>
+              
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href="#" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="transform hover:scale-105 transition-transform duration-300"
+                >
+                  <img 
+                    src={appStoreBadge} 
+                    alt="Download on the App Store" 
+                    className="h-10 md:h-12" 
+                  />
+                </a>
+                <a 
+                  href="#" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="transform hover:scale-105 transition-transform duration-300"
+                >
+                  <img 
+                    src={googlePlayBadge} 
+                    alt="Get it on Google Play" 
+                    className="h-10 md:h-12" 
+                  />
+                </a>
+              </div>
+            </div>
+
+            {/* Right Image Container */}
+            <div className="w-full lg:w-1/2 relative h-[300px] md:h-[400px] lg:h-[450px] mt-8 lg:mt-0">
+              {/* Phone Image */}
+              <div className="absolute inset-0 flex items-end justify-center lg:justify-end lg:pr-12 xl:pr-12">
+                <img 
+                  ref={phoneRef}
+                  src={phoneMockup} 
+                  alt="Vaya App on Phone" 
+                  className="h-auto w-auto max-h-full lg:max-h-[450px] object-contain z-10"
+                />  
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Right Image */}
-        <div className="absolute right-[-2rem] bottom-0 z-10">
-          <img src={phoneMockup} alt="Vaya App on Phone" className="max-w-sm md:max-w-md lg:max-w-lg" /> {/* TODO(i18n): "Vaya App on Phone" for alt text */}
         </div>
       </div>
     </section>

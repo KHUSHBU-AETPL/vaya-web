@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import logo from '../assets/images/logo_vaya.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { FiChevronDown, FiX, FiMenu } from 'react-icons/fi';
 
 const Navbar = () => {
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path || location.pathname.startsWith(path);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState('EN'); // Default to EN as per design
@@ -47,7 +50,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           {/* Desktop Navigation Links - Centered */}
           <div className="hidden md:flex items-center space-x-8"> {/* No ml-auto here, will be centered by justify-between */}
-            <Link to="/about" className="text-primary-black hover:text-primary-orange transition-colors duration-200">
+            <Link to="/about" className={`transition-colors duration-200 ${isActive('/about') ? 'text-primary-orange font-semibold' : 'text-primary-black hover:text-primary-orange'}`}>
               <span className="text-medium-weight text-medium">About</span>
             </Link>
             <div className="relative" ref={playFootballRef}>
@@ -56,14 +59,7 @@ const Navbar = () => {
                 className="flex items-center gap-1 text-primary-black hover:text-primary-orange transition-colors duration-200 focus:outline-none"
               >
                 <span className="text-medium-weight text-medium">Play Football</span>
-                <svg
-                  className={`ml-1 h-4 w-4 transition-transform ${playFootballOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <FiChevronDown className={`ml-1 h-4 w-4 transition-transform ${playFootballOpen ? 'rotate-180' : ''}`} />
               </button>
               {playFootballOpen && (
                 <div className="absolute left-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
@@ -114,7 +110,7 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <Link to="/faq" className="text-primary-black hover:text-primary-orange transition-colors duration-200">
+            <Link to="/faq" className={`transition-colors duration-200 ${isActive('/faq') ? 'text-primary-orange font-semibold' : 'text-primary-black hover:text-primary-orange'}`}>
               <span className="text-medium-weight text-medium">FAQ</span>
             </Link>
           </div>
@@ -129,14 +125,7 @@ const Navbar = () => {
                 className="flex items-center gap-1 text-primary-black hover:text-primary-orange transition-colors duration-200 focus:outline-none"
               >
                 <span className="text-medium-weight text-medium">{selectedLang}</span>
-                <svg
-                  className={`ml-1 h-4 w-4 transition-transform ${langOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <FiChevronDown className={`ml-1 h-4 w-4 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
               </button>
               {langOpen && (
                 <div className="absolute right-0 mt-2 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
@@ -165,24 +154,8 @@ const Navbar = () => {
               onClick={toggleMobileMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-primary-black hover:text-primary-orange focus:outline-none transition-colors duration-200"
             >
-              <svg
-                className={`h-6 w-6 ${mobileMenuOpen ? 'hidden' : 'block'}`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <svg
-                className={`h-6 w-6 ${mobileMenuOpen ? 'block' : 'hidden'}`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <FiMenu className={`h-6 w-6 ${mobileMenuOpen ? 'hidden' : 'block'}`} />
+              <FiX className={`h-6 w-6 ${mobileMenuOpen ? 'block' : 'hidden'}`} />
             </button>
           </div>
         </div>
