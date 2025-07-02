@@ -66,7 +66,7 @@ const FooterSection = () => {
                   id="email-input"
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none pr-24"  
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none pr-32"  
                   style={{ 
                     fontSize: 'var(--font-size-medium)', 
                     lineHeight: 'var(--line-height-medium)', 
@@ -74,16 +74,18 @@ const FooterSection = () => {
                     fontWeight: 'var(--font-weight-medium)'
                   }}
                 />
-                <button 
-                  className="absolute right-0 top-0 h-full bg-primary-orange text-white px-6 hover:bg-opacity-90 transition-colors rounded-r-md" 
-                  style={{ 
-                    fontSize: 'var(--font-size-medium)', 
-                    lineHeight: 'var(--line-height-medium)', 
-                    fontWeight: 'var(--font-weight-medium)'
-                  }}
-                >
-                  Subscribe {/* TODO(i18n): "Subscribe" */}
-                </button>
+                <div className="absolute right-0 top-0 h-full flex items-center pr-3">
+                  <button 
+                    className="bg-primary-orange text-white px-4 py-1 hover:bg-opacity-90 transition-colors rounded-md" 
+                    style={{ 
+                      fontSize: 'var(--font-size-medium)', 
+                      lineHeight: 'var(--line-height-medium)', 
+                      fontWeight: 'var(--font-weight-medium)'
+                    }}
+                  >
+                    Subscribe {/* TODO(i18n): "Subscribe" */}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
