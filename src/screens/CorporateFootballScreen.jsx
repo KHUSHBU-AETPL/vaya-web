@@ -14,28 +14,28 @@ const CorporateFootballScreen = () => {
               <span className="text-primary-black">Customized Corporate Football</span>
             </h1>
             
-            <p className="text-lg text-left text-primary-black mb-4">
+            <p className="text-lg text-justify text-primary-black mb-4">
               Vaya makes it possible for companies, organizations, or co-
               working spaces to organize football activities for their staff.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-4">
+            <p className="text-base text-justify text-primary-black mb-4">
               We offer private sessions, field rentals, tournaments, and
               leagues tailored to your needs and schedule.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-4">
+            <p className="text-base text-justify text-primary-black mb-4">
               Whether you want a one-time event or a regular competition,
               we'll work with you to create the right football experience for
               your team.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-6">
+            <p className="text-base text-justify text-primary-black mb-6">
               Once a slot is confirmed, payment can be made through the
               app or by bank transfer, with an invoice provided if needed.
             </p>
             
-            {/* CTA Button */}
+            {/* CTA Button */}  
             <div className="mt-6 text-left">
               <a 
                 href="#" 

@@ -14,18 +14,18 @@ const FieldRentalsScreen = () => {
               <span className="text-primary-black">Field rentals</span>
             </h1>
             
-            <p className="text-lg text-left text-primary-black mb-4">
+            <p className="text-lg text-justify text-primary-black mb-4">
               Field rentals allow you to book a pitch for your own event.
               You can share your preferred time and location with our
               support team, and we'll do our best to find a suitable offer.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-4">
+            <p className="text-base text-justify text-primary-black mb-4">
               This option gives you flexibility to organize games that fit your
               wishes.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-4">
+            <p className="text-base text-justify text-primary-black mb-4">
               Once a slot is confirmed, payment can be made through the
               app or by bank transfer, with an invoice available if desired.
             </p>

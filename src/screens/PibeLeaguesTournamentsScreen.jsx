@@ -13,7 +13,7 @@ const PibeLeaguesTournamentsScreen = () => {
             <h1 className="text-3xl font-bold mb-6 text-left">
               <span className="text-primary-black">PIBE Leagues & Tournaments</span>
             </h1>
-            <p className="text-lg text-left text-primary-black mb-4">
+            <p className="text-lg text-justify text-primary-black mb-4">
               We bring together football lovers of all levels in a structured, 
               7-a-side format that's both competitive and community-
               driven. Whether you're looking to test your team's strength or 
@@ -21,7 +21,7 @@ const PibeLeaguesTournamentsScreen = () => {
               place for you here.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-4">
+            <p className="text-base text-justify text-primary-black mb-4">
               Our leagues and tournaments are open to players of all skill 
               levels, and focus on creating a friendly yet competitive 
               atmosphere where fair play and quality organization come 
@@ -29,20 +29,20 @@ const PibeLeaguesTournamentsScreen = () => {
               you find the right squad or spot.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-4">
+            <p className="text-base text-justify text-primary-black mb-4">
               All games are managed by the PIBE team, ensuring a 
               professional matchday experience, smooth logistics, and a 
               great vibe on and off the pitch. Expect clear schedules, and a 
               strong sense of community from kickoff to final whistle.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-4">
+            <p className="text-base text-justify text-primary-black mb-4">
               And for those who love to keep track of their progress, you 
               can follow live statistics through the app, including league 
               standings, top goalscorers, MVPs, and more.
             </p>
             
-            <p className="text-base text-left text-primary-black mb-4">
+            <p className="text-base text-justify text-primary-black mb-4">
               Simply register through the app, select the competition that 
               suits you, and get ready to play.
             </p>

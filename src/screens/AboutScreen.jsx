@@ -86,7 +86,7 @@ const AboutScreen = () => {
                 </button>
                 {openItem === item.id && (
                   <div className="mt-3 sm:mt-4 pl-9 sm:pl-12 text-primary-black">
-                    <p className="text-left text-sm sm:text-base leading-relaxed">{item.description}</p> {/* TODO(i18n): item.description */} 
+                    <p className="text-justify text-sm sm:text-base leading-relaxed">{item.description}</p> {/* TODO(i18n): item.description */} 
                   </div>
                 )}
               </div>

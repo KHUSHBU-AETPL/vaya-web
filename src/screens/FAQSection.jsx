@@ -79,7 +79,7 @@ const FAQItem = ({ question, answer, className = '' }) => {
       <div 
         className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100 mt-3 sm:mt-4' : 'max-h-0 opacity-0'}`}
       > {/* Smooth animation for opening/closing */}
-        <p className="text-sm sm:text-base leading-relaxed text-left text-primary-dark-gray">
+        <p className="text-sm sm:text-base leading-relaxed text-justify text-primary-dark-gray">
           {answer} {/* TODO(i18n): Localize answer */}
         </p>
       </div>
