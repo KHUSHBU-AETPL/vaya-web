@@ -3,8 +3,8 @@ import corporateFootballImage from '../assets/images/Image.svg';
 
 const CorporateFootballScreen = () => {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-20 bg-primary-white">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full py-20 bg-primary-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[100px]">
         {/* Content Container */}
         <div className="flex flex-col lg:flex-row-reverse gap-12">
           {/* Left Content */}

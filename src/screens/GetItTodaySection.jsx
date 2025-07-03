@@ -31,7 +31,7 @@ const GetItTodaySection = () => {
 
   return (
     <section className="bg-primary-beige py-10 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[100px]">
         <div className="bg-primary-orange rounded-2xl sm:rounded-3xl relative overflow-hidden">
           {/* Background curved lines */}
           <div className="absolute top-0 right-0 w-full h-full overflow-hidden">

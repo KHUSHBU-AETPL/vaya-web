@@ -59,10 +59,11 @@ const HeroSection = () => {
           </svg>
         </button>
       )}
-      <section className="bg-primary-beige pt-0 pb-12 sm:pb-16 lg:pb-24">
-        <div className="w-full px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 max-w-7xl mx-auto"> 
-          {/* Left Content Area */}
-          <div className="lg:w-1/2 text-center px-4 sm:px-8 lg:px-12 lg:text-left">
+      <section className="bg-primary-beige pt-6 sm:pt-4 md:pt-2 lg:pt-0 pb-12 sm:pb-16 lg:pb-24">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-[100px]">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
+            {/* Left Content Area */}
+            <div className="lg:w-1/2 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-3 sm:mb-4">
               <span className="text-primary-orange">Find Your Game.</span> {/* TODO(i18n): "Find Your Game." */}
               <span className="text-primary-black"> Join the Movement.</span> {/* TODO(i18n): "Join the Movement." */}
@@ -87,6 +88,7 @@ const HeroSection = () => {
               alt="Vaya App on Phone" 
               className="max-w-[75%] sm:max-w-xs md:max-w-sm lg:max-w-md w-full h-auto" 
             /> {/* Responsive sizing */} {/* TODO(i18n): "Vaya App on Phone" for alt text */}
+          </div>
           </div>
         </div>
       </section>

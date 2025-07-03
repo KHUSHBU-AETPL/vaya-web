@@ -50,11 +50,11 @@ const FooterLink = ({ href, children }) => {
 const FooterSection = () => {
   return (
     <footer className="bg-primary-beige py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[100px]">
         {/* Newsletter Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-12 lg:mb-16 gap-8">
           <div className="w-full lg:w-1/3">
-            <h3 className="font-bold text-primary-orange mb-4 whitespace-nowrap" style={{ fontSize: 'var(--font-size-xlarge)', lineHeight: 'var(--line-height-xlarge)', fontWeight: 'var(--font-weight-semibold)' }}>
+            <h3 className="font-bold text-primary-orange mb-4 lg:whitespace-nowrap" style={{ fontSize: 'var(--font-size-xlarge)', lineHeight: 'var(--line-height-xlarge)', fontWeight: 'var(--font-weight-semibold)' }}>
               Get the latests updates from Vaya {/* TODO(i18n): "Get the latests updates from Vaya" */}
             </h3>
             <p className="mb-4" style={{ fontSize: 'var(--font-size-medium)', lineHeight: 'var(--line-height-medium)', color: 'var(--color-primary-black)' }}>

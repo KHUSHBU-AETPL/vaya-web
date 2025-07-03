@@ -9,11 +9,11 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path || location.pathname.startsWith(path);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobilePlayFootballOpen, setMobilePlayFootballOpen] = useState(false);
-  const [mobilePoliciesOpen, setMobilePoliciesOpen] = useState(false);
+
   const [langOpen, setLangOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState('EN'); // Default to EN as per design
   const [playFootballOpen, setPlayFootballOpen] = useState(false);
-  const [policiesOpen, setPoliciesOpen] = useState(false);
+
 
   // Language options
   const languages = [
@@ -31,16 +31,11 @@ const Navbar = () => {
   const togglePlayFootballDropdown = () => {
     setPlayFootballOpen(!playFootballOpen);
     if (langOpen) setLangOpen(false);
-    if (policiesOpen) setPoliciesOpen(false);
-  };
-  const togglePoliciesDropdown = () => {
-    setPoliciesOpen(!policiesOpen);
-    if (langOpen) setLangOpen(false);
-    if (playFootballOpen) setPlayFootballOpen(false);
   };
 
+
   const playFootballRef = useRef(null);
-  const policiesRef = useRef(null);
+
   const langRef = useRef(null);
 
   // Function to close dropdowns when clicking outside
@@ -54,23 +49,21 @@ const Navbar = () => {
       if (playFootballRef.current && !playFootballRef.current.contains(event.target)) {
         setPlayFootballOpen(false);
       }
-      if (policiesRef.current && !policiesRef.current.contains(event.target)) {
-        setPoliciesOpen(false);
-      }
+
     }
     
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [playFootballRef, policiesRef]);
+  }, [playFootballRef]);
   
   // Close mobile menu on scroll
   const handleScroll = useCallback(() => {
     if (mobileMenuOpen) {
       setMobileMenuOpen(false);
       setMobilePlayFootballOpen(false);
-      setMobilePoliciesOpen(false);
+
     }
   }, [mobileMenuOpen]);
   
@@ -83,7 +76,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-primary-beige">
-      <div className="w-full px-4 sm:px-6 lg:px-8"> {/* Changed to w-full for full width, kept padding */} 
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-[100px]"> {/* Updated to match hero section with max-width and centered */}
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center"> {/* Added items-center for vertical alignment */}
@@ -158,37 +151,7 @@ const Navbar = () => {
             <Link to="/faq" className={`transition-colors duration-200 ${isActive('/faq') ? 'text-primary-orange font-semibold' : 'text-primary-black hover:text-primary-orange'}`}>
               <span className={`text-medium-weight text-medium ${isActive('/faq') ? 'text-primary-orange' : ''}`}>FAQ</span>
             </Link>
-            {/* Policies Dropdown */}
-            <div className="relative" ref={policiesRef}>
-              <button
-                onClick={togglePoliciesDropdown}
-                onBlur={() => handleBlur(setPoliciesOpen)}
-                className="flex items-center gap-1 text-primary-black hover:text-primary-orange transition-colors duration-200 focus:outline-none"
-              >
-                <span className={`text-medium-weight text-medium ${isActive('/booking-policy') || isActive('/refund-policy') ? 'text-primary-orange' : ''}`}>Policies</span>
-                <FiChevronDown className={`ml-1 h-4 w-4 transition-transform ${policiesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {policiesOpen && (
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white z-50">
-                  <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                    <Link 
-                      to="/booking-policy"
-                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
-                      onClick={() => setPoliciesOpen(false)}
-                    >
-                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Booking Policy</span>
-                    </Link>
-                    <Link 
-                      to="/refund-policy"
-                      className="block px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200"
-                      onClick={() => setPoliciesOpen(false)}
-                    >
-                      <span className="text-gray-700 hover:text-primary-orange transition-colors duration-200">Refund and Cancellation Policy</span>
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
+
             <Link to="/contact" className={`transition-colors duration-200 ${isActive('/contact') ? 'text-primary-orange font-semibold' : 'text-primary-black hover:text-primary-orange'}`}>
               <span className={`text-medium-weight text-medium ${isActive('/contact') ? 'text-primary-orange' : ''}`}>Contact</span>
             </Link>
@@ -317,34 +280,7 @@ const Navbar = () => {
             <span className="text-semibold text-medium">FAQ</span>
           </Link>
           
-          {/* Policies Dropdown - Left Aligned */}
-          <div className="px-3 py-2">
-            <button
-              onClick={() => setMobilePoliciesOpen(!mobilePoliciesOpen)}
-              className={`flex items-center text-left w-full ${isActive('/booking-policy') || isActive('/refund-policy') ? 'text-primary-orange' : 'text-primary-black hover:text-primary-orange'} transition-colors duration-200 focus:outline-none`}
-            >
-              <span className="text-semibold text-medium mr-2">Policies</span>
-              <FiChevronDown className={`h-4 w-4 transition-transform ${mobilePoliciesOpen ? 'rotate-180' : ''}`} />
-            </button>
-            {mobilePoliciesOpen && (
-              <div className="pl-4 mt-2 space-y-2">
-                <Link 
-                  to="/booking-policy"
-                  className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span className="text-medium hover:text-primary-orange transition-colors duration-200">Booking Policy</span>
-                </Link>
-                <Link 
-                  to="/refund-policy"
-                  className="block py-1 text-primary-black hover:text-primary-orange transition-colors duration-200 text-left"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span className="text-medium hover:text-primary-orange transition-colors duration-200">Refund Policy</span>
-                </Link>
-              </div>
-            )}
-          </div>
+
           
           {/* Contact Link - Left Aligned */}
           <Link to="/contact" className={`block px-3 py-2 rounded-md transition-colors duration-200 text-left ${isActive('/contact') ? 'text-primary-orange' : 'text-primary-black hover:text-primary-orange'}`}>

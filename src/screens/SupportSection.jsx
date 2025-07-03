@@ -5,7 +5,7 @@ import supportImage from '../assets/images/Vaya_Notifications 1.svg';
 const SupportSection = () => {
   return (
     <section className="bg-white py-16 lg:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px]">
         <div className="p-8 lg:p-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
             {/* Left Content */}
