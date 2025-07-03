@@ -13,6 +13,7 @@
     "@fontsource/dm-sans": "^5.2.5",
     "@tailwindcss/typography": "^0.5.12",
     "@tailwindcss/vite": "^4.1.7",
+    "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
