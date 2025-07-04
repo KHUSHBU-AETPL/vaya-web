@@ -155,6 +155,7 @@ const FooterSection = () => {
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6" style={{ fontSize: 'var(--font-size-small)', lineHeight: 'var(--line-height-small)', color: 'var(--color-primary-black)' }}>
               <FooterLink href="#">Terms & Conditions</FooterLink>
+              <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
               <FooterLink href="/refund-policy">Refund & Cancellation Policy</FooterLink>
               <FooterLink href="/booking-policy">Booking Policy</FooterLink>
               <FooterLink href="/contact">Contact Us</FooterLink>

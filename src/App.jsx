@@ -37,6 +37,7 @@ const FieldRentalsScreen = lazy(() => import('./screens/FieldRentalsScreen'))
 // Legal pages
 const RefundPolicyPage = lazy(() => import('./pages/Legal/RefundPolicy/RefundPolicyPage'))
 const BookingPolicyPage = lazy(() => import('./pages/Legal/BookingPolicy/BookingPolicyPage'))
+const PrivacyPolicyPage = lazy(() => import('./pages/Legal/PrivacyPolicy'))
 
 // Legacy components for backward compatibility
 const AboutScreen = lazy(() => import('./screens/AboutScreen'))
@@ -174,6 +175,13 @@ function App() {
         <Layout>
           <Suspense fallback={<div>Loading...</div>}>
             <BookingPolicyPage />
+          </Suspense>
+        </Layout>
+      } />
+      <Route path="/privacy-policy" element={
+        <Layout>
+          <Suspense fallback={<div>Loading...</div>}>
+            <PrivacyPolicyPage />
           </Suspense>
         </Layout>
       } />

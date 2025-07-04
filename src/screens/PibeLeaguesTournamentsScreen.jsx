@@ -49,18 +49,17 @@ const PibeLeaguesTournamentsScreen = () => {
             
             {/* Additional Information Section */}
             <div className="mt-6">
-              <p className="text-sm text-left text-primary-black mb-1">
-                For more information, see the League Rules and FAQ;
+              <p className="text-base text-left text-primary-black mb-4">
+                For more information, see the League Rules and FAQ:
               </p>
-              <p className="text-sm text-left text-primary-black mb-1">
-                General League Rules and Conditions
+              <p className="text-base text-left text-primary-black mb-2">
+                <a href="#" className="text-primary-orange hover:underline">General League Rules and Conditions</a>
               </p>
-              <p className="text-sm text-left text-primary-black mb-1">
-                League FAQ
+              <p className="text-base text-left text-primary-black mb-4">
+                <a href="#" className="text-primary-orange hover:underline">League FAQ</a>
               </p>
-              <p className="text-sm text-left text-primary-black mb-6">
-                <span className="text-primary-orange">julianandres4343@gmail.com</span>, I added 2 links here so people 
-                can find all info on your League Section
+              <p className="text-base text-left text-primary-black mb-6">
+                Contact: <a href="mailto:holapibe.barcelona@gmail.com" className="text-primary-orange hover:underline">holapibe.barcelona@gmail.com</a>
               </p>
             </div>
             
