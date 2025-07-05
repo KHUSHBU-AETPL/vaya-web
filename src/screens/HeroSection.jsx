@@ -105,7 +105,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image Area */}
-          <div className="lg:w-1/2 flex justify-center mt-8 xs:mt-10 sm:mt-12 md:mt-16 lg:mt-0 lg:justify-end">
+          <div className="lg:w-1/2 flex justify-center mt-8 xs:mt-10 sm:mt-12 md:mt-16 lg:mt-16 lg:justify-end">
             <img 
               src={phoneMockup} 
               alt="Vaya App on Phone" 
