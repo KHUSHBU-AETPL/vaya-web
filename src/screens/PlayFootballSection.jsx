@@ -40,11 +40,15 @@ const PlayFootballSection = () => {
     <>
     <div className="w-full py-12 sm:py-16 lg:py-24 bg-primary-beige">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[100px] text-center mb-12">
-        <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-          <span className="text-primary-orange">Play Football</span>{" "}
-          <span className="text-primary-black">With Vaya</span> {/* TODO(i18n): Main heading */}
+        <div className="flex justify-center mb-4">
+          <span className="inline-block text-primary-orange text-xs font-semibold" style={{ width: 'fit-content', minWidth: '145px', height: '30px', borderRadius: '98px', padding: '6px 16px', gap: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#FEE5D9' }}>
+            PLAY FOOTBALL
+          </span>
+        </div>
+        <h1 className="mb-6 text-center">
+          <span style={{ fontSize: '40px', lineHeight: '100%', fontWeight: 'var(--font-weight-bold)', color: 'var(--color-primary-black)', letterSpacing: '0px' }}>Play Football with Vaya</span> {/* TODO(i18n): Main heading */}
         </h1>
-        <p className="text-lg text-primary-black max-w-xl mx-auto">
+        <p className="max-w-xl mx-auto" style={{ fontSize: '16px', lineHeight: '24px', fontWeight: '500', color: '#171717', letterSpacing: '0px' }}>
           Football has never been this easy and fun! Whether you're looking to join a quick pick-up game or dive into a league, Vaya makes it simple to get on the pitch and enjoy the game your way. {/* TODO(i18n): Description */}
         </p>
       </div>
@@ -52,7 +56,7 @@ const PlayFootballSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[100px] flex flex-col lg:flex-row items-center lg:items-start gap-8 sm:gap-12 lg:gap-16 xl:gap-24 mt-10 sm:mt-16">
         {/* Left Content - Options List */}
         <div className="lg:w-1/2 w-full">
-          <h2 className="text-xl sm:text-2xl font-bold text-primary-black mb-4 sm:mb-6 text-left">Explore Our Options:</h2> {/* TODO(i18n): "Explore Our Options:" */}
+          <h2 className="mb-4 sm:mb-6 text-left" style={{ fontSize: '24px', lineHeight: '100%', fontWeight: 'var(--font-weight-bold)', color: '#1C1C1F', letterSpacing: '0px' }}>Explore Our Options:</h2> {/* TODO(i18n): "Explore Our Options:" */}
           <div>
             {options.map((option, index) => (
               <React.Fragment key={index}>
@@ -61,8 +65,8 @@ const PlayFootballSection = () => {
                     <img src={option.icon} alt={option.title} className="w-6 h-6 text-primary-white" /> {/* TODO(i18n): alt text for icons */}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary-black text-left">{option.title}</h3> {/* TODO(i18n): option.title */}
-                    <p className="text-base text-primary-black text-left leading-relaxed">{option.description}</p> {/* TODO(i18n): option.description */}
+                    <h3 className="text-left" style={{ fontSize: '18px', lineHeight: '24px', fontWeight: '600', color: 'var(--color-primary-black)', letterSpacing: '0px', marginBottom: '4px' }}>{option.title}</h3> {/* TODO(i18n): option.title */}
+                    <p className="text-left" style={{ fontSize: '16px', lineHeight: '24px', fontWeight: '500', color: '#171717', letterSpacing: '0px' }}>{option.description}</p> {/* TODO(i18n): option.description */}
                   </div>
                 </div>
                 {index < options.length - 1 && (

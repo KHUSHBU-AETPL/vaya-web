@@ -8,10 +8,10 @@ const FAQSection = () => {
         <span className="inline-block bg-secondary-orange-25 text-primary-orange text-xs font-semibold px-3 py-1 rounded-full mb-3 sm:mb-4">
           FAQ {/* TODO(i18n): "FAQ" */}
         </span>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-primary-dark mb-4 sm:mb-6">
-          Any questions? We got you. {/* TODO(i18n): "Any questions? We got you." */}
+        <h2 className="text-center mb-4 sm:mb-6">
+          <span style={{ fontSize: '40px', lineHeight: '100%', fontWeight: '700', color: 'var(--color-primary-black)', letterSpacing: '0px' }}>Any questions? We got you.</span> {/* TODO(i18n): "Any questions? We got you." */}
         </h2>
-        <p className="text-base sm:text-lg text-primary-dark-gray max-w-2xl mx-auto mb-8 sm:mb-12 px-2">
+        <p className="max-w-2xl mx-auto mb-8 sm:mb-12 px-2 text-center" style={{ fontSize: 'var(--font-size-medium)', lineHeight: 'var(--line-height-medium)', fontWeight: 'var(--font-weight-medium)', color: 'var(--color-primary-black)', letterSpacing: '0px' }}>
           In our FAQ section, you'll find everything you need to know about our football games, how we work, and how to collaborate with us. {/* TODO(i18n): "In our FAQ section, you'll find everything you need to know about our football games, how we work, and how to collaborate with us." */}
         </p>
 
@@ -48,6 +48,14 @@ const FAQSection = () => {
             />
           </div>
         </div>
+        
+        {/* Medical Coverage FAQ - Centered */}
+        <div className="max-w-3xl mx-auto mt-4 sm:mt-8">
+          <FAQItem
+            question="Am I medically covered if I get injured while participating in an activity organised through Vaya?"
+            answer="No, Vaya does not offer medical or accident insurance. Our platform helps organize and manage sports activities, but we are not responsible for any injuries, accidents, or health-related issues that may occur while participating. We highly recommend that all users have their own personal health or accident insurance that covers sports-related incidents. Each user is responsible for having the necessary coverage and for taking appropriate precautions to minimize the risk of injury."
+          />
+        </div>
 
         {/* More FAQ's Link */}
         <a href="#" className="inline-flex items-center text-primary-orange font-semibold mt-8 sm:mt-12 group">
@@ -70,7 +78,7 @@ const FAQItem = ({ question, answer, className = '' }) => {
   return (
     <div className={`bg-white rounded-xl p-4 sm:p-6 shadow-sm cursor-pointer transition-all duration-200 hover:shadow-md ${className}`} onClick={toggleOpen}>
       <div className="flex justify-between items-center gap-3">
-        <p className="text-base sm:text-lg font-semibold text-primary-dark">
+        <p style={{ fontSize: 'var(--font-size-large)', lineHeight: '24px', fontWeight: 'var(--font-weight-semibold)', color: 'var(--color-primary-black)', letterSpacing: '0px' }}>
           {question} {/* TODO(i18n): Localize question */}
         </p>
         {/* TODO(icon): Replace with actual arrow/chevron icon from assets/icons */}
@@ -79,7 +87,7 @@ const FAQItem = ({ question, answer, className = '' }) => {
       <div 
         className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100 mt-3 sm:mt-4' : 'max-h-0 opacity-0'}`}
       > {/* Smooth animation for opening/closing */}
-        <p className="text-sm sm:text-base leading-relaxed text-justify text-primary-dark-gray">
+        <p style={{ fontSize: 'var(--font-size-medium)', lineHeight: 'var(--line-height-medium)', fontWeight: 'var(--font-weight-medium)', color: 'var(--color-primary-black)', letterSpacing: '0px', textAlign: 'justify' }}>
           {answer} {/* TODO(i18n): Localize answer */}
         </p>
       </div>

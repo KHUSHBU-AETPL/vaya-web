@@ -64,29 +64,52 @@ const HeroSection = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
             {/* Left Content Area */}
             <div className="lg:w-1/2 text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-3 sm:mb-4">
-              <span className="text-primary-orange">Find Your Game.</span> {/* TODO(i18n): "Find Your Game." */}
-              <span className="text-primary-black"> Join the Movement.</span> {/* TODO(i18n): "Join the Movement." */}
+            <h1 className="mb-3 sm:mb-4">
+              <div className="flex flex-row flex-wrap justify-center lg:justify-start">
+                <span style={{ 
+                  fontSize: 'clamp(36px, 8vw, 64px)', 
+                  lineHeight: 'clamp(46px, 9vw, 74px)', 
+                  fontWeight: 'var(--font-weight-bold)', 
+                  color: 'var(--color-primary-orange)', 
+                  letterSpacing: '0px', 
+                  display: 'inline-block',
+                  whiteSpace: 'nowrap'
+                }}>Find your Game. </span>
+                <span style={{ 
+                  fontSize: 'clamp(36px, 8vw, 64px)', 
+                  lineHeight: 'clamp(46px, 9vw, 74px)', 
+                  fontWeight: 'var(--font-weight-bold)', 
+                  color: 'var(--color-primary-black)', 
+                  letterSpacing: '0px', 
+                  display: 'inline-block',
+                  whiteSpace: 'nowrap'
+                }}>Join the Movement.</span> {/* TODO(i18n): "Find Your Game. Join the Movement." */}
+              </div>
             </h1>
-            <p className="text-primary-black text-base sm:text-lg text-medium-weight mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0"> 
+            <p className="mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0" style={{ 
+              fontSize: 'clamp(16px, 4vw, 18px)', 
+              lineHeight: 'var(--line-height-medium)', 
+              fontWeight: 'var(--font-weight-medium)', 
+              color: 'var(--color-primary-black)' 
+            }}> 
               At Vaya we want to make football inclusive and accessible. Book a game in a few clicks and join our beautiful community! {/* TODO(i18n): Full paragraph text */}
             </p>
             <div className="flex justify-center lg:justify-start gap-3 sm:gap-4">
               <a href="#" target="_blank" rel="noopener noreferrer"> {/* TODO(link): Add actual App Store link */}
-                <img src={appStoreBadge} alt="Download on the App Store" className="h-10 sm:h-12" /> {/* TODO(i18n): "Download on the App Store" for alt text */}
+                <img src={appStoreBadge} alt="Download on the App Store" className="h-8 xs:h-10 sm:h-12" /> {/* TODO(i18n): "Download on the App Store" for alt text */}
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer"> {/* TODO(link): Add actual Google Play link */}
-                <img src={googlePlayBadge} alt="Get it on Google Play" className="h-10 sm:h-12" /> {/* TODO(i18n): "Get it on Google Play" for alt text */} {/* Updated to use SVG */}
+                <img src={googlePlayBadge} alt="Get it on Google Play" className="h-8 xs:h-10 sm:h-12" /> {/* TODO(i18n): "Get it on Google Play" for alt text */} {/* Updated to use SVG */}
               </a>
             </div>
           </div>
 
           {/* Right Image Area */}
-          <div className="lg:w-1/2 flex justify-center mt-12 sm:mt-16 lg:mt-24 lg:justify-end">
+          <div className="lg:w-1/2 flex justify-center mt-8 xs:mt-10 sm:mt-12 md:mt-16 lg:mt-0 lg:justify-end">
             <img 
               src={phoneMockup} 
               alt="Vaya App on Phone" 
-              className="max-w-[75%] sm:max-w-xs md:max-w-sm lg:max-w-md w-full h-auto" 
+              className="max-w-[85%] xs:max-w-[80%] sm:max-w-xs md:max-w-sm lg:max-w-md w-full h-auto" 
             /> {/* Responsive sizing */} {/* TODO(i18n): "Vaya App on Phone" for alt text */}
           </div>
           </div>

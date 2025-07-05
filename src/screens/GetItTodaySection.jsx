@@ -61,27 +61,52 @@ const GetItTodaySection = () => {
           
           <div className="flex flex-col lg:flex-row items-center relative z-10 py-8 md:py-10 lg:py-0">
             {/* Left Content */}
-            <div className="w-full lg:w-1/2 px-6 sm:px-8 md:px-10 lg:px-16 text-white">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl text-left font-bold leading-tight mb-4 sm:mb-6">
-                Get it today!
+            <div className="w-full lg:w-1/2 px-5 xs:px-6 sm:px-8 md:px-10 lg:px-16 text-white text-center lg:text-left">
+              <h2 className="mb-4 sm:mb-6">
+                <span style={{ 
+                  fontSize: 'clamp(36px, 8vw, 64px)', 
+                  lineHeight: 'clamp(46px, 9vw, 74px)', 
+                  fontWeight: '700', 
+                  color: '#FFFFFF', 
+                  letterSpacing: '0px',
+                  display: 'block'
+                }}>Get it today!</span>
               </h2>
               
-              <ul className="mb-6 sm:mb-8 space-y-2 sm:space-y-3">
+              <ul className="mb-6 sm:mb-8 space-y-2 sm:space-y-3 max-w-md mx-auto lg:mx-0">
                 <li className="flex items-center">
                   <span className="inline-block mr-3 text-lg sm:text-xl">•</span>
-                  <span className="text-sm sm:text-base">Download the Vaya app</span>
+                  <span style={{ 
+                    fontSize: 'clamp(14px, 4vw, 18px)', 
+                    lineHeight: '24px', 
+                    fontWeight: '600', 
+                    color: '#FFFFFF', 
+                    letterSpacing: '0px' 
+                  }}>Download the Vaya app</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block mr-3 text-lg sm:text-xl">•</span>
-                  <span className="text-sm sm:text-base">Find your pick-up game or league</span>
+                  <span style={{ 
+                    fontSize: 'clamp(14px, 4vw, 18px)', 
+                    lineHeight: '24px', 
+                    fontWeight: '600', 
+                    color: '#FFFFFF', 
+                    letterSpacing: '0px' 
+                  }}>Find your pick-up game or league</span>
                 </li>
                 <li className="flex items-center">
                   <span className="inline-block mr-3 text-lg sm:text-xl">•</span>
-                  <span className="text-sm sm:text-base">Book and enjoy!</span>
+                  <span style={{ 
+                    fontSize: 'clamp(14px, 4vw, 18px)', 
+                    lineHeight: '24px', 
+                    fontWeight: '600', 
+                    color: '#FFFFFF', 
+                    letterSpacing: '0px' 
+                  }}>Book and enjoy!</span>
                 </li>
               </ul>
               
-              <div className="flex flex-wrap gap-3 sm:gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
                 <a 
                   href="#" 
                   target="_blank" 
@@ -91,7 +116,7 @@ const GetItTodaySection = () => {
                   <img 
                     src={appStoreBadge} 
                     alt="Download on the App Store" 
-                    className="h-9 sm:h-10 md:h-12" 
+                    className="h-8 xs:h-9 sm:h-10 md:h-12" 
                   />
                 </a>
                 <a 
@@ -103,21 +128,21 @@ const GetItTodaySection = () => {
                   <img 
                     src={googlePlayBadge} 
                     alt="Get it on Google Play" 
-                    className="h-9 sm:h-10 md:h-12" 
+                    className="h-8 xs:h-9 sm:h-10 md:h-12" 
                   />
                 </a>
               </div>
             </div>
 
             {/* Right Image Container */}
-            <div className="w-full lg:w-1/2 relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px] mt-6 sm:mt-8 lg:mt-0">
+            <div className="w-full lg:w-1/2 relative h-[200px] xs:h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px] mt-4 xs:mt-6 sm:mt-8 lg:mt-0">
               {/* Phone Image */}
-              <div className="absolute inset-0 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-12">
+              <div className="absolute inset-0 flex items-end justify-center lg:justify-end lg:pr-6 xl:pr-12">
                 <img 
                   ref={phoneRef}
                   src={phoneMockup} 
                   alt="Vaya App on Phone" 
-                  className="h-auto w-auto max-h-full max-w-[90%] sm:max-w-[85%] lg:max-w-[90%] lg:max-h-[450px] object-contain z-10"
+                  className="h-auto w-auto max-h-full max-w-[95%] xs:max-w-[90%] sm:max-w-[85%] lg:max-w-[90%] lg:max-h-[450px] object-contain z-10"
                 />  
               </div>
             </div>
