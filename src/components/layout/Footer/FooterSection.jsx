@@ -3,7 +3,7 @@ import appStoreButton from '../../../assets/icons/store-badges/App Store downloa
 import playStoreButton from '../../../assets/icons/store-badges/play Store download button.svg';
 import facebookIcon from '../../../assets/icons/social/Facebook.svg';
 import instagramIcon from '../../../assets/icons/social/Instagram.svg';
-import vayaLogo from '../../../assets/logos/Logo_Vaya!.png'; // Updated path to use logos directory
+import vayaLogo from '../../../assets/images/logo_vaya.png'; // Updated path to use logos directory
 
 const FooterLink = ({ href, children }) => {
   const [isActive, setIsActive] = useState(false);
@@ -24,13 +24,14 @@ const FooterLink = ({ href, children }) => {
       href={href} 
       className={`relative transition-all duration-300 ease-in-out ${isActive ? 'text-primary-orange' : 'hover:text-primary-orange'}`}
       style={{
-        fontSize: 'var(--font-size-medium)', 
-        lineHeight: 'var(--line-height-medium)', 
+        fontSize: '16px', 
+        lineHeight: '24px', 
         color: isActive ? 'var(--color-primary-orange)' : 'var(--color-primary-black)',
         transform: isActive ? 'translateX(4px) translateY(-2px) scale(1.08)' : 'translateX(0) translateY(0) scale(1)',
         display: 'inline-block',
         textShadow: isActive ? '0 1px 2px rgba(255, 102, 0, 0.2)' : 'none',
-        fontWeight: isActive ? 'var(--font-weight-medium)' : 'inherit',
+        fontWeight: 'var(--font-weight-medium)',
+        letterSpacing: '0px'
       }}
       onMouseDown={handleActivation}
       onMouseUp={handleDeactivation}
@@ -54,47 +55,58 @@ const FooterSection = () => {
         {/* Newsletter Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-12 lg:mb-16 gap-8">
           <div className="w-full lg:w-1/3">
-            <h3 className="font-bold text-primary-orange mb-4 lg:whitespace-nowrap" style={{ fontSize: 'var(--font-size-xlarge)', lineHeight: 'var(--line-height-xlarge)', fontWeight: 'var(--font-weight-semibold)' }}>
-              Get the latests updates from Vaya {/* TODO(i18n): "Get the latests updates from Vaya" */}
-            </h3>
-            <p className="mb-4" style={{ fontSize: 'var(--font-size-medium)', lineHeight: 'var(--line-height-medium)', color: 'var(--color-primary-black)' }}>
-              Sign up for our newsletter {/* TODO(i18n): "Sign up for our newsletter" */}
-            </p>
-            <div className="flex">
-              <div className="relative w-full">
-                <input
-                  id="email-input"
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none pr-32"  
+            <div className="flex flex-col items-center lg:items-start">
+              <h4 className="mb-2 whitespace-normal sm:whitespace-nowrap text-center lg:text-left">
+                <span style={{ fontSize: 'clamp(28px, 6vw, 40px)', lineHeight: '100%', fontWeight: 'var(--font-weight-medium)', color: 'var(--color-primary-orange)', letterSpacing: '0px' }}>Get the latest updates from Vaya</span>
+              </h4>
+              <p className="mb-4 whitespace-normal sm:whitespace-nowrap text-center lg:text-left" style={{ fontSize: '18px', lineHeight: '24px', fontWeight: 'var(--font-weight-medium)', color: 'var(--color-primary-black)', letterSpacing: '0px' }}>Sign up for our newsletter {/* TODO(i18n): "Sign up for our newsletter" */}</p>
+            </div>
+            <div className="relative w-full max-w-[669px] mx-auto lg:mx-0">
+              <input
+                id="email-input"
+                type="email"
+                placeholder="Enter your email"
+                className="w-full focus:outline-none rounded-[8px] pr-[120px]"  
+                style={{ 
+                  fontSize: '16px', 
+                  lineHeight: '24px', 
+                  color: 'var(--color-primary-black)', 
+                  fontWeight: 'var(--font-weight-medium)',
+                  letterSpacing: '0px',
+                  border: 'none',
+                  fontFamily: 'DM Sans',
+                  backgroundColor: '#FFFFFF',
+                  padding: '12px 16px',
+                  height: '48px'
+                }}
+              />
+              <div className="absolute right-[8px] top-[6px]">
+                <button 
+                  className="inline-flex items-center justify-center hover:bg-opacity-90 transition-all duration-300 rounded-[4px]" 
                   style={{ 
-                    fontSize: 'var(--font-size-medium)', 
-                    lineHeight: 'var(--line-height-medium)', 
-                    color: 'var(--color-gray-100)', 
-                    fontWeight: 'var(--font-weight-medium)'
+                    backgroundColor: 'var(--color-primary-orange)', 
+                    color: '#FFFFFF', 
+                    fontWeight: 'var(--font-weight-medium)', 
+                    padding: '8px 16px',
+                    fontSize: '16px', 
+                    lineHeight: '24px',
+                    border: 'none',
+                    letterSpacing: '0px',
+                    fontFamily: 'DM Sans',
+                    height: '36px'
                   }}
-                />
-                <div className="absolute right-0 top-0 h-full flex items-center pr-3">
-                  <button 
-                    className="bg-primary-orange text-white px-4 py-1 hover:bg-opacity-90 transition-colors rounded-md" 
-                    style={{ 
-                      fontSize: 'var(--font-size-medium)', 
-                      lineHeight: 'var(--line-height-medium)', 
-                      fontWeight: 'var(--font-weight-medium)'
-                    }}
-                  >
-                    Subscribe {/* TODO(i18n): "Subscribe" */}
-                  </button>
-                </div>
+                >
+                  Subscribe {/* TODO(i18n): "Subscribe" */}
+                </button>
               </div>
             </div>
           </div>
 
           {/* Links Section */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-8 sm:gap-x-16 gap-y-8 md:gap-x-24 w-full lg:w-auto">
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-x-[82px] w-full lg:w-auto justify-center sm:justify-start">
             {/* Vaya App Links */}
-            <div>
-              <h4 className="mb-4" style={{ fontSize: 'var(--font-size-h3)', lineHeight: 'var(--line-height-h3)', fontWeight: 'var(--font-weight-semibold)', color: 'var(--color-primary-black)' }}>Vaya App</h4>
+            <div className="text-center sm:text-left">
+              <h4 className="mb-4" style={{ fontSize: '18px', lineHeight: '24px', fontWeight: 'var(--font-weight-semibold)', color: 'var(--color-primary-black)', letterSpacing: '0px' }}>Vaya App</h4>
               <ul className="space-y-3">
                 <li><FooterLink href="#">Play Football</FooterLink></li>
                 <li><FooterLink href="#">Code of conduct</FooterLink></li>
@@ -104,8 +116,8 @@ const FooterSection = () => {
             </div>
 
             {/* About Vaya Links */}
-            <div>
-              <h4 className="mb-4 " style={{ fontSize: 'var(--font-size-h3)', lineHeight: 'var(--line-height-h3)', fontWeight: 'var(--font-weight-semibold)', color: 'var(--color-primary-black)' }}>About Vaya</h4>
+            <div className="text-center sm:text-left">
+              <h4 className="mb-4" style={{ fontSize: '18px', lineHeight: '24px', fontWeight: 'var(--font-weight-semibold)', color: 'var(--color-primary-black)', letterSpacing: '0px' }}>About Vaya</h4>
               <ul className="space-y-3">
                 <li><FooterLink href="#">Our Story</FooterLink></li>
                 <li><FooterLink href="/contact">Contact</FooterLink></li>
@@ -116,10 +128,10 @@ const FooterSection = () => {
         </div>
 
         {/* App Store Buttons and Social Media in same row */}
-        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-12 lg:mb-16 gap-6">
+        <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-8 sm:mb-12 lg:mb-16 gap-6">
           {/* App Store Buttons */}
-          <div>
-            <div className="flex flex-wrap gap-4">
+          <div className="w-full sm:w-auto">
+            <div className="flex flex-wrap justify-center sm:justify-start gap-4">
               <a href="#" className="hover:opacity-90 transition-opacity">
                 <img src={appStoreButton} alt="Download on the App Store" className="h-10" />
               </a>
@@ -151,10 +163,15 @@ const FooterSection = () => {
         <div className="border-t pt-6 mt-4" style={{ borderColor: 'var(--color-gray-25)' }}>
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="mb-6 sm:mb-0">
-              <img src={vayaLogo} alt="VAYA!" className="h-8" />
+              <img 
+                src={vayaLogo} 
+                alt="Vaya Logo" 
+                style={{ width: '81px', height: '48px' }} 
+              />
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6" style={{ fontSize: 'var(--font-size-small)', lineHeight: 'var(--line-height-small)', color: 'var(--color-primary-black)' }}>
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left flex-wrap justify-center sm:justify-start gap-4 sm:gap-6" style={{ fontSize: 'var(--font-size-small)', lineHeight: 'var(--line-height-small)', color: 'var(--color-primary-black)' }}>
               <FooterLink href="#">Terms & Conditions</FooterLink>
+              <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
               <FooterLink href="/refund-policy">Refund & Cancellation Policy</FooterLink>
               <FooterLink href="/booking-policy">Booking Policy</FooterLink>
               <FooterLink href="/contact">Contact Us</FooterLink>

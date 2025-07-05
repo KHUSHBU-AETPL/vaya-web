@@ -7,15 +7,32 @@ const BookingPolicyScreen = () => {
         {/* Content Container */}
         <div className="flex flex-col items-center">
           {/* Header Section */}
-          <h1 className="text-3xl font-bold mb-6 text-center">
-            <span className="text-primary-orange">Booking Policy</span>
+          <h1 className="mb-6 text-center">
+            <span style={{ 
+              fontSize: 'clamp(32px, 5vw, 40px)', 
+              lineHeight: '100%', 
+              fontWeight: 'var(--font-weight-bold)', 
+              color: 'var(--color-primary-orange)', 
+              letterSpacing: '0px' 
+            }}>Booking Policy</span>
           </h1>
           
-          <p className="text-lg text-center text-primary-black mb-4">
+          <p className="text-center mb-4" style={{ 
+              fontSize: 'clamp(16px, 4vw, 18px)', 
+              lineHeight: 'var(--line-height-medium)', 
+              fontWeight: 'var(--font-weight-medium)', 
+              color: 'var(--color-primary-black)', 
+              letterSpacing: '0px' 
+            }}>
             To ensure a smooth booking experience, please follow these steps when booking games through the Vaya app:
           </p>
           
-          <ol className="list-decimal pl-6 mb-6 space-y-4 text-left text-primary-black w-full">
+          <ol className="list-decimal pl-6 mb-6 space-y-4 text-left w-full" style={{ 
+              fontSize: 'var(--font-size-medium)', 
+              lineHeight: 'var(--line-height-medium)', 
+              fontWeight: 'var(--font-weight-medium)', 
+              color: 'var(--color-primary-black)' 
+            }}>
             <li>
               <strong>Browse Available Games:</strong> Open the Vaya app and navigate to the "Games" tab to see all upcoming games in your area.
             </li>
@@ -38,10 +55,22 @@ const BookingPolicyScreen = () => {
           
           {/* Important Note */}
           <div className="mt-6 p-4 bg-white rounded-md shadow-sm w-full">
-            <p className="font-semibold mb-2 text-center text-primary-black">
+            <p className="mb-2 text-center" style={{ 
+                fontSize: '18px', 
+                lineHeight: '24px', 
+                fontWeight: 'var(--font-weight-semibold)', 
+                color: 'var(--color-primary-black)', 
+                letterSpacing: '0px' 
+              }}>
               Important Note:
             </p>
-            <p className="text-base text-center text-primary-black">
+            <p className="text-center" style={{ 
+                fontSize: 'var(--font-size-medium)', 
+                lineHeight: 'var(--line-height-medium)', 
+                fontWeight: 'var(--font-weight-medium)', 
+                color: 'var(--color-primary-black)', 
+                letterSpacing: '0px' 
+              }}>
               Please refer to our{' '}
               <a href="/refund-policy" className="text-primary-orange hover:underline">Refund & Cancellation Policy</a>{' '}
               for information about cancellations, refunds, and no-shows.
@@ -54,7 +83,11 @@ const BookingPolicyScreen = () => {
               href="/" 
               className="inline-block bg-primary-orange text-primary-white px-4 py-2 rounded-md hover:bg-warning-dark transition-colors duration-300"
             >
-              <span className="text-semibold text-sm">Back to Home</span>
+              <span style={{ 
+                  fontSize: 'var(--font-size-medium)', 
+                  lineHeight: 'var(--line-height-medium)', 
+                  fontWeight: 'var(--font-weight-semibold)' 
+                }}>Back to Home</span>
             </a>
           </div>
         </div>

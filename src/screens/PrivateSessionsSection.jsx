@@ -1,5 +1,5 @@
 import React from 'react';
-import privateSessionsImage from '../assets/images/Image.svg';
+import privateSessionsImage from '../assets/images/privatesessions.svg';
 
 const PrivateSessionsSection = () => {
   return (
@@ -19,17 +19,17 @@ const PrivateSessionsSection = () => {
             
             {/* Right column - Text content */}
             <div className="lg:w-1/2 w-full">
-              <h2 className="text-2xl font-bold text-left text-primary-black mb-6">Private sessions</h2>
+              <h2 className="mb-6 text-left" style={{ fontSize: 'var(--font-size-xlarge)', lineHeight: 'var(--line-height-xlarge)', fontWeight: 'var(--font-weight-semibold)', color: 'var(--color-primary-black)' }}>Private sessions</h2>
               
-              <p className="text-base text-left text-primary-black mb-3">
+              <p className="mb-3 text-left" style={{ fontSize: 'var(--font-size-medium)', lineHeight: 'var(--line-height-medium)', color: 'var(--color-primary-black)', fontWeight: 'var(--font-weight-medium)' }}>
                 Private sessions are exclusive football matches you can create for your group.
               </p>
               
-              <p className="text-base text-left text-primary-black mb-3">
+              <p className="mb-3 text-left" style={{ fontSize: 'var(--font-size-medium)', lineHeight: 'var(--line-height-medium)', color: 'var(--color-primary-black)', fontWeight: 'var(--font-weight-medium)' }}>
                 We can set up a private game for you in the app that's only visible and accessible to people with a specific link.
               </p>
               
-              <p className="text-base text-left text-primary-black mb-6">
+              <p className="mb-6 text-left" style={{ fontSize: 'var(--font-size-medium)', lineHeight: 'var(--line-height-medium)', color: 'var(--color-primary-black)', fontWeight: 'var(--font-weight-medium)' }}>
                 This way, you control who joins, making it perfect for friends, teams, or special events.
               </p>
               
@@ -37,7 +37,8 @@ const PrivateSessionsSection = () => {
               <div className="text-left">
                 <a 
                   href="#" 
-                  className="bg-primary-orange text-primary-white px-4 py-2 rounded-lg inline-block"
+                  className="bg-primary-orange px-4 py-2 rounded-lg inline-block"
+                  style={{ color: 'var(--color-primary-white)', fontSize: 'var(--font-size-medium)', fontWeight: 'var(--font-weight-medium)' }}
                 >
                   Request private session
                 </a>

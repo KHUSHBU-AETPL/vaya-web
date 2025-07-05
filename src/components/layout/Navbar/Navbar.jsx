@@ -77,26 +77,26 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-primary-beige">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-[100px]"> {/* Updated to match hero section with max-width and centered */}
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center"> {/* Added items-center for vertical alignment */}
-            <Link to="/" className="flex-shrink-0">
-              <img src={logo} alt="Vaya Logo" className="h-8 w-auto" /> {/* Adjusted logo size based on design */}
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <img src={logo} alt="Vaya Logo" style={{ width: '81px', height: '48px' }} /> {/* Updated logo dimensions to match design specs */}
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           {/* Desktop Navigation Links - Centered */}
-          <div className="hidden md:flex items-center space-x-8"> {/* No ml-auto here, will be centered by justify-between */}
+          <div className="hidden md:flex items-center" style={{ width: '248px', height: '32px', gap: '19px', paddingTop: '8px' }}>
             <Link to="/about" className={`transition-colors duration-200 ${isActive('/about') ? 'text-primary-orange font-semibold' : 'text-primary-black hover:text-primary-orange'}`}>
-              <span className={`text-medium-weight text-medium ${isActive('/about') ? 'text-primary-orange' : ''}`}>About</span>
+              <span style={{ fontSize: '16px', lineHeight: '24px', fontWeight: '500', letterSpacing: '0px', fontFamily: 'DM Sans', display: 'inline-block', height: '24px', whiteSpace: 'nowrap' }} className={`${isActive('/about') ? 'text-primary-orange' : 'text-primary-black'}`}>About</span>
             </Link>
             <div className="relative" ref={playFootballRef}>
               <button
                 onClick={togglePlayFootballDropdown}
                 className={`flex items-center gap-1 transition-colors duration-200 focus:outline-none ${isActive('/play-football') ? 'text-primary-orange' : 'text-primary-black hover:text-primary-orange'}`}
               >
-                <span className={`text-medium-weight text-medium ${isActive('/play-football') ? 'text-primary-orange' : ''}`}>Play Football</span>
+                <span style={{ fontSize: '16px', lineHeight: '24px', fontWeight: '500', letterSpacing: '0px', fontFamily: 'DM Sans', height: '24px', whiteSpace: 'nowrap' }} className={`${isActive('/play-football') ? 'text-primary-orange' : 'text-primary-black'}`}>Play Football</span>
                 <FiChevronDown className={`ml-1 h-4 w-4 transition-transform ${playFootballOpen ? 'rotate-180' : ''}`} />
               </button>
               {playFootballOpen && (
@@ -149,16 +149,16 @@ const Navbar = () => {
               )}
             </div>
             <Link to="/faq" className={`transition-colors duration-200 ${isActive('/faq') ? 'text-primary-orange font-semibold' : 'text-primary-black hover:text-primary-orange'}`}>
-              <span className={`text-medium-weight text-medium ${isActive('/faq') ? 'text-primary-orange' : ''}`}>FAQ</span>
+              <span style={{ fontSize: '16px', lineHeight: '24px', fontWeight: '500', letterSpacing: '0px', fontFamily: 'DM Sans', display: 'inline-block', height: '24px', whiteSpace: 'nowrap' }} className={`${isActive('/faq') ? 'text-primary-orange' : 'text-primary-black'}`}>FAQ</span>
             </Link>
 
             <Link to="/contact" className={`transition-colors duration-200 ${isActive('/contact') ? 'text-primary-orange font-semibold' : 'text-primary-black hover:text-primary-orange'}`}>
-              <span className={`text-medium-weight text-medium ${isActive('/contact') ? 'text-primary-orange' : ''}`}>Contact</span>
+              <span style={{ fontSize: '16px', lineHeight: '24px', fontWeight: '500', letterSpacing: '0px', fontFamily: 'DM Sans', display: 'inline-block', height: '24px', whiteSpace: 'nowrap' }} className={`${isActive('/contact') ? 'text-primary-orange' : 'text-primary-black'}`}>Contact</span>
             </Link>
           </div>
 
           {/* Desktop Language and Button - Right Aligned */}
-          <div className="hidden md:flex items-center space-x-8"> {/* Will be pushed to right by justify-between */}
+          <div className="hidden md:flex items-center space-x-8" style={{ paddingTop: '8px' }}> {/* Will be pushed to right by justify-between */}
             {/* Language Dropdown */}
             <div className="relative">
               <button
